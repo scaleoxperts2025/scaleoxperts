@@ -20,12 +20,17 @@ const BackgroundBeams = dynamic(
     loading: () => <div></div>,
   }
 );
+import QuestionsCards from "../components/QuestionsCards/QuestionsCards";
 import NavBar from "../components/NavBar/NavBar";
 import ShinyText from "../components/ShinyText/ShinyText";
 import Companies from "../components/Companies/Companies";
 import Reviews from "../components/Reviews/Reviews";
 
 export default function Home() {
+  const redirect = () => {
+    window.open("https://cal.com/siddharth-meena/15min", "_blank");
+  };
+
   return (
     <div className="min-h-screen pb-[100rem] bg-white relative overflow-hidden">
       <Particles
@@ -248,8 +253,10 @@ export default function Home() {
 
         <section className="py-16 px-4 max-w-7xl mx-auto">
           <div className="mb-12">
-            <h2 className="text-6xl font-pop mb-3.5">Meet Our Team</h2>
-            <p className="text-gray-800 font-inter max-w-xl text-[1.05rem]">
+            <h2 className="sm:text-6xl xss:text-4xl font-pop sm:mb-3.5 xss:mb-1.5">
+              Meet Our Team
+            </h2>
+            <p className="text-gray-800 font-inter max-w-xl sm:text-[1.05rem] xss:text-[0.93rem]">
               Our team of passionate digital marketing experts, dedicated to
               crafting innovative solutions that fuel success.
             </p>
@@ -312,18 +319,25 @@ export default function Home() {
         </section>
 
         <section
-            // ref={sectionRef}
-            className="flex flex-col w-[100%] max-w-[77rem] mx-auto mt-[4.5rem] relative"
-          >
-            <h2 className="text-center font-inter font-medium text-[#090909] sm:text-5xl xs:text-4xl xss:text-4xl leading-10 relative xs:w-full xss:w-[97%] z-10">
-              Loved by people around the world
-            </h2>
-            <h4 className="text-center font-inter font-medium text-[#393939] sm:text-base xss:text-sm sm:w-[60%] mt-3 xss:w-[90%] mx-auto relative z-10">
-              Trusted and admired globally, our agency brings innovation to
-              users everywhere.
-            </h4>
-            <Reviews />
-          </section>
+          // ref={sectionRef}
+          className="flex flex-col w-[100%] max-w-[77rem] mx-auto mt-[4.5rem] relative"
+        >
+          <h2 className="text-center font-inter font-medium text-[#090909] sm:text-5xl xs:text-4xl xss:text-4xl leading-10 relative xs:w-full xss:w-[97%] z-10">
+            Loved by people around the world
+          </h2>
+          <h4 className="text-center font-inter font-medium text-[#393939] sm:text-base xss:text-sm sm:w-[60%] mt-3 xss:w-[90%] mx-auto relative z-10">
+            Trusted and admired globally, our agency brings innovation to users
+            everywhere.
+          </h4>
+          <Reviews />
+        </section>
+        <section className="mt-24">
+          <h2 className="text-center font-inter text-[#090909] sm:text-5xl xs:text-4xl xss:text-4xl leading-10 relative xs:w-full xss:w-[97%] z-10 mb-10">
+            Questions? Answers.
+          </h2>
+          <QuestionsCards redirect={redirect} />
+        </section>
+
       </div>
     </div>
   );
