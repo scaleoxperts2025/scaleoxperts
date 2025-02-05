@@ -1,3 +1,4 @@
+'use client'
 import React, { useState } from "react";
 import Link from "next/link";
 import { FiMenu, FiX } from "react-icons/fi";
@@ -15,9 +16,16 @@ const NavBar = () => {
     <nav className="flex max-w-[77rem] mx-auto items-center justify-between pt-6 text-white px-4 sm:px-6">
       <Link
         href="/"
-        className="text-transparent bg-clip-text bg-gradient-to-r from-[#ff8d1a] cursor-pointer to-[#CC9900] text-2xl font-mono font-semibold transition-all duration-300 hover:scale-105"
+        className="flex items-center space-x-2 cursor-pointer transition-all duration-300 hover:scale-105"
       >
-        ScaleOXperts
+        <img
+          src="/plain.webp"
+          alt="ScaleOxperts Logo"
+          className="sm:w-12 xss:w-11 h-auto object-contain"
+        />
+        <span className="text-black text-2xl font-mono font-semibold">
+          ScaleOXperts
+        </span>
       </Link>
 
       {/* Desktop Navigation */}
@@ -105,7 +113,6 @@ const NavBar = () => {
               Contact Us
             </Link>
           </div>
-
         </div>
       </div>
     </nav>

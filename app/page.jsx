@@ -20,6 +20,7 @@ const BackgroundBeams = dynamic(
     loading: () => <div></div>,
   }
 );
+import Footer from '../components/Footer/Footer'
 import QuestionsCards from "../components/QuestionsCards/QuestionsCards";
 import NavBar from "../components/NavBar/NavBar";
 import ShinyText from "../components/ShinyText/ShinyText";
@@ -27,19 +28,24 @@ import Companies from "../components/Companies/Companies";
 import Reviews from "../components/Reviews/Reviews";
 
 export default function Home() {
+  const aboutUsRef = useRef(null);
   const redirect = () => {
     window.open("https://cal.com/siddharth-meena/15min", "_blank");
   };
 
+  const scrollToAboutUs = () => {
+    aboutUsRef.current?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
-    <div className="min-h-screen pb-[100rem] bg-white relative overflow-hidden">
-      <Particles
+    <div className="min-h-screen pb-[2rem] bg-white relative overflow-hidden">
+      {/* <Particles
         className="absolute inset-0 pointer-events-none"
-        quantity={70}
+        quantity={100}
         ease={80}
         color="#FFD700"
         refresh
-      />
+      /> */}
       <div className="relative z-10">
         <section className="bg-grid-black/[0.04] dark:bg-grid-white/[0.04]">
           <NavBar />
@@ -230,7 +236,7 @@ export default function Home() {
                     {service.description}
                   </p>
                   <button className="text-[#FF8C00] font-pop text-sm hover:text-[#E67A00] transition-colors flex items-center gap-2">
-                    {"What's included in service?"}
+                    {"Learn more"}
                     <svg
                       className="w-4 h-4"
                       fill="none"
@@ -374,6 +380,15 @@ export default function Home() {
             </button>
           </div>
         </section>
+        <footer className="max-w-[77rem] mx-auto">
+          <Footer /> 
+          <p
+            className="text-center font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 dark:from-neutral-950 to-neutral-200 dark:to-neutral-800 w-full overflow-hidden whitespace-nowrap"
+            style={{ fontSize: "min(13vw)" }}
+          >
+            Scaleoxperts
+          </p>
+        </footer>
       </div>
     </div>
   );

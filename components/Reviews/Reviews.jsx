@@ -151,7 +151,7 @@ const testimonials = [
 
 const ReviewChild = ({ name, position, quote, image }) => {
   return (
-    <div className="child w-full rounded-3xl bg-[#fbfbfb] p-8 pb-8 mb-6 shadow-lg">
+    <div className="child w-full rounded-3xl bg-[#f4f4f4] p-8 pb-8 mb-6 shadow-lg">
       <div className="flex">
         <img src={image} className="h-10 w-10 rounded-full" alt={name} />
         <div className="flex flex-col ml-4">

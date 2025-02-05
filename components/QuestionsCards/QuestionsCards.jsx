@@ -83,9 +83,11 @@ const AdoptionQuestions = ({ redirect }) => {
   const [openQuestions, setOpenQuestions] = useState({});
   const [heights, setHeights] = useState({});
   const containerRef = useRef(null);
-  const lastWindowSize = useRef({
-    width: window.innerWidth,
-  });
+  const [windowWidth, setWindowWidth] = useState(0);
+
+  useEffect(() => {
+    setWindowWidth(window.innerWidth);
+  }, []);
 
   const questions = useMemo(
     () => [
@@ -165,26 +167,21 @@ const AdoptionQuestions = ({ redirect }) => {
   useEffect(() => {
     const handleResize = () => {
       const currentWidth = window.innerWidth;
-      const currentHeight = window.innerHeight;
-      const widthDiff = Math.abs(currentWidth - lastWindowSize.current.width);
-      const heightDiff = Math.abs(
-        currentHeight - lastWindowSize.current.height
-      );
+      const widthDiff = Math.abs(currentWidth - windowWidth);
 
       if (widthDiff >= 10) {
+        setWindowWidth(currentWidth);
         recalculateHeights();
-        lastWindowSize.current = { width: currentWidth };
       }
     };
 
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
-  }, [recalculateHeights]);
+  }, [recalculateHeights, windowWidth]);
 
   useEffect(() => {
     updateHoverStyle();
   }, [updateHoverStyle, openQuestions, heights]);
-
   return (
     <div className="md:w-[85vw] sm:w-[90vw] xss:w-[92.5vw] relative mx-auto bg-white dark:bg-[#131313] font-[poppins] flex">
       <div className="flex w-full mx-auto justify-between gap-24">
