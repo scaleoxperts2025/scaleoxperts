@@ -82,9 +82,9 @@ export default function Home() {
               <button
                 className="px-6 xs:px-8 sm:px-10 py-2 xs:py-3 
                   text-sm xs:text-base md:text-lg 
-                  bg-[#FFA500] border border-[#FFA500] 
-                  transition-all hover:scale-[1.03] hover:bg-[#E69500] 
-                  hover:border-[#E69500] text-white 
+                  bg-[#ff8d1a] border border-[#ff8d1a] 
+                  transition-all hover:scale-[1.03] hover:bg-[#fe9328] 
+                  hover:border-[#fe9328] text-white 
                   font-pop font-medium rounded-full whitespace-nowrap"
               >
                 Inquire Now
@@ -145,7 +145,7 @@ export default function Home() {
                   { number: "30+", text: "Partnerships" },
                 ].map((stat, index) => (
                   <div key={index} className=" sm:flex-none flex-1 px-2">
-                    <h2 className="text-4xl xs:text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-pop text-[#FF8C00] leading-tight">
+                    <h2 className="text-4xl xs:text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-pop text-[#ff8d1a] leading-tight">
                       {stat.number}
                     </h2>
                     <h4 className="font-inter ml-1 mt-1 text-xs xs:text-sm sm:text-base md:text-lg font-medium text-gray-600 leading-tight">
@@ -332,12 +332,48 @@ export default function Home() {
           <Reviews />
         </section>
         <section className="mt-24">
-          <h2 className="text-center font-inter text-[#090909] sm:text-5xl xs:text-4xl xss:text-4xl leading-10 relative xs:w-full xss:w-[97%] z-10 mb-10">
+          <h2 className="text-center font-inter text-[#090909] sm:text-5xl xs:text-4xl xss:text-3xl leading-10 relative xs:w-full xss:w-[97%] z-10 mb-10">
             Questions? Answers.
           </h2>
           <QuestionsCards redirect={redirect} />
         </section>
 
+        <section className="mb-24 pt-14 mt-24 bg-dot-[#D6D5D5] dark:bg-dot-[#333333] pb-16 border rounded-2xl border-black dark:border-white md:w-[85vw] sm:w-[90vw] xss:w-[92.5vw] mx-auto w-full">
+          <div className="relative w-full">
+            <h2 className="relative z-10 text-center text-[1.8rem] dark:text-white xss:text-[2.2rem] sm:text-[2.7rem] md:text-[3rem] lg:text-[3.5rem] xss:font-inter xss:font-bold sm:font-semibold sm:tracking-[0.032em] leading-[1.3] sm:leading-[1.12] sm:px-4 xss:px-6 ">
+              <span className="sm:px-2 px-1 sm:inline-block backdrop-filter backdrop-blur-[2px]">
+                What are you waiting for??{" "}
+                {/* <span className="text-[#479fd2] dark:text-[#299fba] backdrop-filter backdrop-blur-[2px]"> */}
+                  {/* Join us */}
+                  {/* <span className="xss:opacity-100 sm:opacity-0">!</span> */}
+                {/* </span> */}
+              </span>
+              <span className="sm:px-2 px-1 sm:inline-block backdrop-filter backdrop-blur-[2px]">
+                {/* Don't miss out on the chance to{" "} */}
+                <span className="text-[#fe9328] dark:text-[#0cff51]">
+                  Limited slots
+                </span>{" "}
+                available
+              </span>
+            </h2>
+          </div>
+
+          <p className="text-center mb-5 mx-auto w-[80%] mt-3 font-inter font-medium text-[#666666] dark:text-[#cccccc] sm:text-xl">
+            Access cutting-edge digital marketing solutions with our expert
+            team. From crafting compelling campaigns to driving explosive
+            growth, everything you need is just a click away.
+          </p>
+
+          <div className="flex mt-8 w-full justify-center">
+            <button
+              href="/register"
+              className="px-[4.5vw] py-[1.9vw] xss:py-[0.65rem] xss:px-[1.18rem] xs:px-[4.2vw] xs:py-[1.5vw] sm:px-[2rem] sm:py-[0.6rem] md:px-[2.5rem] md:py-[0.7rem] lg:px-[2.15rem] lg:py-[0.7rem] bg-[#ff8d1a] border border-[#ff8d1a] transition-all hover:scale-[1.03] hover:bg-[#fe9328] hover:border-[#fe9328] text-white text-[4vw]sm:text-[1.1rem] md:text-[1.2rem] font-pop font-medium rounded-full"
+            >
+              Schedule an Meeting
+              <i className="ri-arrow-right-line ml-2 text-lg"></i>
+            </button>
+          </div>
+        </section>
       </div>
     </div>
   );

@@ -51,7 +51,7 @@ const QuestionCard = React.memo(
         data-index={index}
       >
         <div className="w-full flex items-center justify-between">
-          <p className="md:text-[26px] text-[20px] unselectable dark:text-white w-fit">
+          <p className="sm:text-[26px] text-[20px] unselectable dark:text-white w-fit">
             {question}
           </p>
           <button className="rounded-full border border-black dark:border-white leading-none w-7 h-7 text-[25px] transition-transform duration-300">
@@ -217,7 +217,7 @@ const AdoptionQuestions = ({ redirect }) => {
           <div className="flex justify-center mt-5">
             <button
               onClick={redirect}
-              className="sm:px-[1.42rem] xss:px-[2rem] xss:py-[0.7rem] xss:text-lg sm:py-[0.4rem] bg-[#FFA500] border border-[#FFA500] transition-all hover:scale-[1.03] hover:bg-[#E69500] hover:border-[#E69500] text-white sm:text-base font-pop font-medium rounded-full"
+              className="sm:px-[1.42rem] xss:px-[2rem] xss:py-[0.7rem] xss:text-lg sm:py-[0.4rem] bg-[#ff8d1a] border border-[#ff8d1a] transition-all hover:scale-[1.03] hover:bg-[#fe9328] hover:border-[#fe9328] text-white sm:text-base font-pop font-medium rounded-full"
             >
               Book a Call
             </button>
