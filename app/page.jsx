@@ -1,35 +1,25 @@
 "use client";
-import dynamic from "next/dynamic";
 import { useEffect, useRef } from "react";
 import Link from 'next/link'
 import Tooltip from "../components/Tooltip/Tooltip";
 import { useSearchParams } from "next/navigation";
-
-const Particles = dynamic(
-  () => import("../components/ui/particles").then((mod) => mod.Particles),
-  {
-    ssr: false,
-    loading: () => <div></div>,
-  }
-);
-const BackgroundBeams = dynamic(
-  () =>
-    import("../components/ui/background-beams").then(
-      (mod) => mod.BackgroundBeams
-    ),
-  {
-    ssr: false,
-    loading: () => <div></div>,
-  }
-);
 import Footer from "../components/Footer/Footer";
 import QuestionsCards from "../components/QuestionsCards/QuestionsCards";
 import NavBar from "../components/NavBar/NavBar";
 import ShinyText from "../components/ShinyText/ShinyText";
 import Companies from "../components/Companies/Companies";
 import Reviews from "../components/Reviews/Reviews";
+import { Suspense } from "react";
 
 export default function Home() {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <HomeContent />
+    </Suspense>
+  );
+}
+
+function HomeContent() {
   const aboutUsRef = useRef(null);
   const searchParams = useSearchParams();
 

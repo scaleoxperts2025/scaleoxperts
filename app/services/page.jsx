@@ -88,9 +88,9 @@ const categories = [
   },
 ];
 
-const Page = () => {
+const PageContent = () => {
   const searchParams = useSearchParams();
-  const scrollTo = searchParams ? searchParams.get("scroll") : null;
+  const scrollTo = searchParams?.get("scroll");
   const serviceRefs = useRef({});
 
   useEffect(() => {
@@ -142,5 +142,11 @@ const Page = () => {
     </div>
   );
 };
+
+const Page = () => (
+  <Suspense fallback={<div>Loading...</div>}>
+    <PageContent />
+  </Suspense>
+);
 
 export default Page;
