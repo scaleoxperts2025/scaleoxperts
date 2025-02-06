@@ -113,7 +113,7 @@ function HomeContent() {
               <h2 className="text-center mt-2 xs:mt-3 font-inter font-medium text-gray-600 text-sm xs:text-base sm:text-lg w-[95%] mx-auto">
                 Trusted by over 150 Businesses Globally
               </h2>
-              <div className="mt-4 xs:mt-4 sm:mb-2 xss:mb-14">
+              <div className="mt-2.5 xs:mt-2.5 sm:mb-2 xss:mb-14">
                 <Companies />
               </div>
             </div>
@@ -306,7 +306,7 @@ function HomeContent() {
                 name: "Mohd Sameer",
                 role: "Co-Founder & Head of Operations",
                 image:
-                  "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=500&q=80",
+                  "/mohd.webp",
               },
               {
                 name: "Nousheen Fatima",
@@ -318,37 +318,37 @@ function HomeContent() {
                 name: "Gaurav Kumar",
                 role: "Senior Strategy Expert",
                 image:
-                  "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=500&q=80",
+                  "/gaurav.webp",
               },
               {
                 name: "Srinihith",
                 role: "Strategy Expert",
                 image:
-                  "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=500&q=80",
-              },
-              {
-                name: "Surya E",
-                role: "Business Associate",
-                image:
-                  "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=500&q=80",
+                  "/srin.webp",
               },
               {
                 name: "Ashok Reddy",
                 role: "Business Associate",
                 image:
-                  "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=500&q=80",
+                "/ashok.webp",
+              },
+              {
+                name: "Surya E",
+                role: "Business Associate",
+                image:
+                  "/surya.webp",
               },
               {
                 name: "Kotla Rahul",
                 role: "Business Associate",
                 image:
-                  "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=500&q=80",
+                  "/kotla.webp",
               },
               {
                 name: "M. Sandeep",
                 role: "Digital Marketing Associate",
                 image:
-                  "https://images.unsplash.com/photo-1519345182560-3f2917c472ef?auto=format&fit=crop&w=500&q=80",
+                  "/sandeep.webp",
               },
               {
                 name: "Madhusudan",
