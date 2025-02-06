@@ -1,7 +1,9 @@
 "use client";
 import dynamic from "next/dynamic";
 import { useEffect, useRef } from "react";
+import Link from 'next/link'
 import Tooltip from "../components/Tooltip/Tooltip";
+import { useSearchParams } from "next/navigation";
 
 const Particles = dynamic(
   () => import("../components/ui/particles").then((mod) => mod.Particles),
@@ -20,7 +22,7 @@ const BackgroundBeams = dynamic(
     loading: () => <div></div>,
   }
 );
-import Footer from '../components/Footer/Footer'
+import Footer from "../components/Footer/Footer";
 import QuestionsCards from "../components/QuestionsCards/QuestionsCards";
 import NavBar from "../components/NavBar/NavBar";
 import ShinyText from "../components/ShinyText/ShinyText";
@@ -29,13 +31,22 @@ import Reviews from "../components/Reviews/Reviews";
 
 export default function Home() {
   const aboutUsRef = useRef(null);
+  const searchParams = useSearchParams();
+
   const redirect = () => {
     window.open("https://cal.com/siddharth-meena/15min", "_blank");
   };
 
   const scrollToAboutUs = () => {
-    aboutUsRef.current?.scrollIntoView({ behavior: 'smooth' });
+    aboutUsRef.current?.scrollIntoView({ behavior: "smooth" });
+    window.history.pushState({}, "", "/");
   };
+
+  useEffect(() => {
+    if (searchParams.get("scroll") === "aboutus") {
+      setTimeout(scrollToAboutUs, 100);
+    }
+  }, [searchParams]);
 
   return (
     <div className="min-h-screen pb-[2rem] bg-white relative overflow-hidden">
@@ -119,7 +130,10 @@ export default function Home() {
           </main>
         </section>
 
-        <section className="w-full max-w-[83rem] mx-auto border-t flex justify-between border-gray-200 relative z-20 overflow-hidden px-4 xss:px-6 xl:px-4">
+        <section
+          ref={aboutUsRef}
+          className="w-full max-w-[83rem] mx-auto border-t flex justify-between border-gray-200 relative z-20 overflow-hidden px-4 xss:px-6 xl:px-4"
+        >
           <div className="h-full flex flex-col justify-between mx-auto pt-8 md:pt-16">
             <div className="sm:text-left text-center">
               <h2 className="text-gray-800 text-6xl font-pop sm:pt-[1rem] xs:pt-[3rem] xss:pt-[2rem]">
@@ -187,54 +201,63 @@ export default function Home() {
               {[
                 {
                   title: "Sales & Business Growth",
+                  shortName: "sales",
                   description:
                     "Boost revenue with proven sales strategies, lead generation, and CRM automation.",
                   icon: "📈",
                 },
                 {
                   title: "Digital Marketing & Branding",
+                  shortName: "marketing",
                   description:
                     "Enhance brand visibility with SEO, social media marketing, and paid ad campaigns.",
                   icon: "🌐",
                 },
                 {
                   title: "Business Automation",
+                  shortName: "automation",
                   description:
                     "Streamline operations with AI-driven automation, CRM solutions, and process optimization.",
                   icon: "🤖",
                 },
                 {
                   title: "Startup Scaling Solutions",
+                  shortName: "startup",
                   description:
                     "Develop go-to-market strategies, optimize pricing, and secure funding for business growth.",
                   icon: "🚀",
                 },
                 {
                   title: "Market Research & Strategy",
+                  shortName: "research",
                   description:
                     "Leverage data-driven insights to analyze competitors and craft winning business strategies.",
                   icon: "📊",
                 },
                 {
                   title: "Lead Generation & Outreach",
+                  shortName: "leads",
                   description:
                     "Maximize conversions with targeted cold emails, outbound marketing, and sales funnel optimization.",
                   icon: "📩",
                 },
                 {
                   title: "Bookkeeping & Accounting",
+                  shortName: "accounting",
                   description:
                     "Providing accurate, hassle-free financial management to streamline your business finances.",
                   icon: "📚",
                 },
                 {
                   title: "Virtual CFO Services",
+                  shortName: "cfo",
                   description:
                     "Offering strategic financial planning, insights, and analysis to drive your company's growth.",
                   icon: "💼",
                 },
                 {
                   title: "Website & App Development",
+                  shortName: "development",
                   description:
                     "Creating custom websites and apps through our network of skilled freelancers to enhance your digital presence.",
                   icon: "💻",
@@ -253,22 +276,24 @@ export default function Home() {
                   <p className="text-gray-600 font-inter text-sm leading-relaxed mb-4">
                     {service.description}
                   </p>
-                  <button className="text-[#FF8C00] font-pop text-sm hover:text-[#E67A00] transition-colors flex items-center gap-2">
-                    {"Learn more"}
-                    <svg
-                      className="w-4 h-4"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M9 5l7 7-7 7"
-                      />
-                    </svg>
-                  </button>
+                  <Link href={`/services?scroll=${service.shortName}`} passHref>
+                    <button className="text-[#FF8C00] font-pop text-sm hover:text-[#E67A00] transition-colors flex items-center gap-2">
+                      Learn more
+                      <svg
+                        className="w-4 h-4"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M9 5l7 7-7 7"
+                        />
+                      </svg>
+                    </button>
+                  </Link>
                 </div>
               ))}
             </div>
@@ -281,8 +306,8 @@ export default function Home() {
               Meet Our Team
             </h2>
             <p className="text-gray-800 font-inter max-w-xl sm:text-[1.05rem] xss:text-[0.93rem]">
-            Our team of passionate digital marketing experts, dedicated to
-            crafting innovative solutions that fuel success.
+              Our team of passionate digital marketing experts, dedicated to
+              crafting innovative solutions that fuel success.
             </p>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-5 gap-8">
@@ -290,65 +315,73 @@ export default function Home() {
               {
                 name: "Mohd Sameer",
                 role: "Co-Founder & Head of Operations",
-                image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=500&q=80",
+                image:
+                  "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=500&q=80",
               },
               {
                 name: "Nousheen Fatima",
                 role: "Co-Founder & Advisory Partner",
-                image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=500&q=80",
+                image:
+                  "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=500&q=80",
               },
               {
                 name: "Gaurav Kumar",
                 role: "Senior Strategy Expert",
-                image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=500&q=80",
+                image:
+                  "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=500&q=80",
               },
               {
                 name: "Srinihith",
                 role: "Strategy Expert",
-                image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=500&q=80",
+                image:
+                  "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=500&q=80",
               },
               {
                 name: "Surya E",
                 role: "Business Associate",
-                image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=500&q=80",
+                image:
+                  "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=500&q=80",
               },
               {
                 name: "Ashok Reddy",
                 role: "Business Associate",
-                image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=500&q=80",
+                image:
+                  "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=500&q=80",
               },
               {
                 name: "Kotla Rahul",
                 role: "Business Associate",
-                image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=500&q=80",
+                image:
+                  "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=500&q=80",
               },
               {
                 name: "M. Sandeep",
                 role: "Digital Marketing Associate",
-                image: "https://images.unsplash.com/photo-1519345182560-3f2917c472ef?auto=format&fit=crop&w=500&q=80",
+                image:
+                  "https://images.unsplash.com/photo-1519345182560-3f2917c472ef?auto=format&fit=crop&w=500&q=80",
               },
               {
                 name: "Madhusudan",
                 role: "Digital Marketing Associate",
-                image: "https://images.unsplash.com/photo-1463453091185-61582044d556?auto=format&fit=crop&w=500&q=80",
+                image:
+                  "https://images.unsplash.com/photo-1463453091185-61582044d556?auto=format&fit=crop&w=500&q=80",
               },
               {
                 name: "Avinasha",
                 role: "HR Associate",
-                image: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=500&q=80",
+                image:
+                  "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=500&q=80",
               },
             ].map((member, index) => (
-              <div key={index} className="flex flex-col">
+              <div key={index} className="flex flex-col group">
                 <div className="w-full aspect-square mb-4 overflow-hidden rounded-[0.4rem]">
                   <img
                     src={member.image}
                     alt={member.name}
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover transition-transform duration-300 ease-in-out group-hover:scale-105"
                   />
                 </div>
-                <h3 className="font-pop font-medium text-lg">
-                  {member.name}
-                </h3>
+                <h3 className="font-pop font-medium text-lg">{member.name}</h3>
                 <p className="font-inter text-gray-600 text-sm">
                   {member.role}
                 </p>
@@ -383,8 +416,8 @@ export default function Home() {
               <span className="sm:px-2 px-1 sm:inline-block backdrop-filter backdrop-blur-[2px]">
                 What are you waiting for??{" "}
                 {/* <span className="text-[#479fd2] dark:text-[#299fba] backdrop-filter backdrop-blur-[2px]"> */}
-                  {/* Join us */}
-                  {/* <span className="xss:opacity-100 sm:opacity-0">!</span> */}
+                {/* Join us */}
+                {/* <span className="xss:opacity-100 sm:opacity-0">!</span> */}
                 {/* </span> */}
               </span>
               <span className="sm:px-2 px-1 sm:inline-block backdrop-filter backdrop-blur-[2px]">
@@ -414,7 +447,7 @@ export default function Home() {
           </div>
         </section>
         <footer className="max-w-[80rem] mx-auto">
-          <Footer /> 
+          <Footer />
           <p
             className="text-center font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 dark:from-neutral-950 to-neutral-200 dark:to-neutral-800 w-full overflow-hidden whitespace-nowrap"
             style={{ fontSize: "min(13vw)" }}

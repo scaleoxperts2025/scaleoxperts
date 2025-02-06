@@ -1,16 +1,47 @@
 'use client'
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
+import { useRouter, useSearchParams } from 'next/navigation';
 import { FiMenu, FiX } from "react-icons/fi";
 
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const router = useRouter();
+  const searchParams = useSearchParams();
+
   const navItems = [
     { name: "Home", route: "/" },
-    { name: "About", route: "/about" },
+    { name: "About", route: "/?scroll=aboutus" },
     { name: "Services", route: "/services" },
-    { name: "Careers", route: "/page" },
+    { name: "Careers", route: "https://www.linkedin.com/company/scaleoxperts" },
   ];
+
+  const handleNavigation = (route, e) => {
+    e.preventDefault();
+    setIsOpen(false);
+
+    if (route === '/') {
+      router.push('/');
+    } else if (route === '/?scroll=aboutus') {
+      router.push('/?scroll=aboutus');
+    } else if (route === '/services') {
+      router.push('/services');
+    } else if (route.startsWith('http')) {
+      window.open(route, '_blank');
+    }
+  };
+
+  useEffect(() => {
+    const handleRouteChange = () => {
+      setIsOpen(false);
+    };
+
+    window.addEventListener('popstate', handleRouteChange);
+
+    return () => {
+      window.removeEventListener('popstate', handleRouteChange);
+    };
+  }, []);
 
   return (
     <nav className="flex max-w-[77rem] mx-auto items-center justify-between pt-6 text-white px-4 sm:px-6">
@@ -32,14 +63,14 @@ const NavBar = () => {
       <ul className="hidden md:flex space-x-8">
         {navItems.map((item) => (
           <li key={item.name}>
-            <Link
+            <a
               href={item.route}
-              key={item.name}
+              onClick={(e) => handleNavigation(item.route, e)}
               className="text-[#282828] hover:text-[#232323] text-sm sm:text-base font-inter transition-colors duration-300 relative group uppercase"
             >
               {item.name}
               <span className="absolute left-0 right-0 bottom-[-1px] h-[1.3px] bg-[#282828] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
-            </Link>
+            </a>
           </li>
         ))}
       </ul>
@@ -93,14 +124,14 @@ const NavBar = () => {
             <ul className="flex flex-col space-y-6 mb-auto">
               {navItems.map((item) => (
                 <li key={item.name}>
-                  <Link
+                  <a
                     href={item.route}
                     className="text-2xl text-[#1a1a1a] font-inter hover:text-[#0b0b0b] transition-colors duration-300 relative group"
-                    onClick={() => setIsOpen(false)}
+                    onClick={(e) => handleNavigation(item.route, e)}
                   >
                     {item.name}
                     <span className="absolute left-0 right-0 bottom-[-1px] h-[1.3px] bg-[#1a1a1a] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
-                  </Link>
+                  </a>
                 </li>
               ))}
             </ul>
