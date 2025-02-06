@@ -47,15 +47,20 @@ const NavBar = () => {
     <nav className="flex max-w-[77rem] mx-auto items-center justify-between pt-6 text-white px-4 sm:px-6">
       <Link
         href="/"
-        className="flex items-center space-x-2 cursor-pointer transition-all duration-300 hover:scale-105"
+        className="flex flex-col items-start cursor-pointer transition-all duration-300 hover:scale-105"
       >
-        <img
-          src="/plain.webp"
-          alt="ScaleOxperts Logo"
-          className="sm:w-12 xss:w-11 h-auto object-contain"
-        />
-        <span className="text-black text-2xl font-mono font-semibold">
-          ScaleOXperts
+        <div className="flex items-center space-x-2">
+          <img
+            src="/plain.webp"
+            alt="ScaleOxperts Logo"
+            className="sm:w-12 xss:w-11 h-auto object-contain"
+          />
+          <span className="text-black text-2xl font-mono font-semibold">
+            ScaleOXperts
+          </span>
+        </div>
+        <span className="text-[#666666ad] text-xs font-inter mt-0.5">
+          ISO 9001-2015 certified consulting org
         </span>
       </Link>
 

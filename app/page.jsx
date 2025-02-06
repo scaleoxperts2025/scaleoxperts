@@ -132,7 +132,7 @@ export default function Home() {
 
         <section
           ref={aboutUsRef}
-          className="w-full max-w-[83rem] mx-auto border-t flex justify-between border-gray-200 relative z-20 overflow-hidden px-4 xss:px-6 xl:px-4"
+          className="w-full max-w-[83rem] mx-auto border-t flex justify-between border-gray-200 relative z-20 px-4 xss:px-6 xl:px-4"
         >
           <div className="h-full flex flex-col justify-between mx-auto pt-8 md:pt-16">
             <div className="sm:text-left text-center">
