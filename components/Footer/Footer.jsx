@@ -25,17 +25,34 @@ const Footer = () => {
       <div className="flex xss:justify-center sm:justify-start items-center space-x-3 text-sm">
         <a
           href="mailto:contact@scaleoxperts.com"
-          className="ri-at-line sm:text-[2.2rem] xss:text-[2rem] text-black transition-all duration-300 ease-in-out hover:scale-110 cursor-pointer"
+          className="ri-mail-fill sm:text-[2.2rem] xss:text-[2rem] text-black transition-all duration-300 ease-in-out hover:scale-110 cursor-pointer"
+          aria-label="Email"
         ></a>
         <a
-          href="https://wa.me/1234567890"
+          href="https://wa.me/918008129875"
           className="ri-whatsapp-fill sm:text-[2.2rem] xss:text-[2rem] text-black transition-all duration-300 ease-in-out hover:scale-110 cursor-pointer"
+          aria-label="WhatsApp"
         ></a>
         <a
-          href="https://linkedin.com/company/scaleoxperts"
-          className="ri-linkedin-fill sm:text-[2.2rem] xss:text-[2rem] text-black transition-all duration-300 ease-in-out hover:scale-110 cursor-pointer"
+          href="https://www.instagram.com/scaleoxperts"
+          className="ri-instagram-fill sm:text-[2.2rem] xss:text-[2rem] text-black transition-all duration-300 ease-in-out hover:scale-110 cursor-pointer"
+          aria-label="Instagram"
         ></a>
-        {/* <a href="https://github.com/scaleoxperts" className="ri-github-fill sm:text-[2.2rem] xss:text-[2rem] text-black transition-all duration-300 ease-in-out hover:scale-110 cursor-pointer"></a> */}
+        <a
+          href="https://maps.app.goo.gl/b74NdrsQJ9bA85vJ7"
+          className="ri-map-pin-fill sm:text-[2.2rem] xss:text-[2rem] text-black transition-all duration-300 ease-in-out hover:scale-110 cursor-pointer"
+          aria-label="Google Maps"
+        ></a>
+        <a
+          href="https://www.linkedin.com/company/scaleoxperts/"
+          className="ri-linkedin-fill sm:text-[2.2rem] xss:text-[2rem] text-black transition-all duration-300 ease-in-out hover:scale-110 cursor-pointer"
+          aria-label="LinkedIn"
+        ></a>
+        <a
+          href="https://www.facebook.com/share/16GkxrWsT3"
+          className="ri-facebook-fill sm:text-[2.2rem] xss:text-[2rem] text-black transition-all duration-300 ease-in-out hover:scale-110 cursor-pointer"
+          aria-label="Facebook"
+        ></a>
       </div>
     </div>
   );

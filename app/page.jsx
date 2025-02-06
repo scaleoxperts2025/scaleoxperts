@@ -221,6 +221,24 @@ export default function Home() {
                     "Maximize conversions with targeted cold emails, outbound marketing, and sales funnel optimization.",
                   icon: "📩",
                 },
+                {
+                  title: "Bookkeeping & Accounting",
+                  description:
+                    "Providing accurate, hassle-free financial management to streamline your business finances.",
+                  icon: "📚",
+                },
+                {
+                  title: "Virtual CFO Services",
+                  description:
+                    "Offering strategic financial planning, insights, and analysis to drive your company's growth.",
+                  icon: "💼",
+                },
+                {
+                  title: "Website & App Development",
+                  description:
+                    "Creating custom websites and apps through our network of skilled freelancers to enhance your digital presence.",
+                  icon: "💻",
+                },
               ].map((service, index) => (
                 <div
                   key={index}
@@ -263,64 +281,79 @@ export default function Home() {
               Meet Our Team
             </h2>
             <p className="text-gray-800 font-inter max-w-xl sm:text-[1.05rem] xss:text-[0.93rem]">
-              Our team of passionate digital marketing experts, dedicated to
-              crafting innovative solutions that fuel success.
+            Our team of passionate digital marketing experts, dedicated to
+            crafting innovative solutions that fuel success.
             </p>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-5 gap-8">
             {[
               {
-                name: "Sarah Chen",
-                role: "Product Designer",
-                image:
-                  "https://images.unsplash.com/photo-1502685104226-ee32379fefbe?auto=format&fit=crop&w=500&q=80",
+                name: "Mohd Sameer",
+                role: "Co-Founder & Head of Operations",
+                image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=500&q=80",
               },
               {
-                name: "Marcus Johnson",
-                role: "Frontend Developer",
-                image:
-                  "https://images.unsplash.com/photo-1599566150163-29194dcaad36?auto=format&fit=crop&w=500&q=80",
+                name: "Nousheen Fatima",
+                role: "Co-Founder & Advisory Partner",
+                image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=500&q=80",
               },
               {
-                name: "Emma Wilson",
-                role: "Marketing Lead",
-                image:
-                  "https://images.unsplash.com/photo-1544723795-3fb6469f5b39?auto=format&fit=crop&w=500&q=80",
+                name: "Gaurav Kumar",
+                role: "Senior Strategy Expert",
+                image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=500&q=80",
               },
               {
-                name: "David Park",
-                role: "UX Researcher",
-                image:
-                  "https://images.unsplash.com/photo-1527980965255-d3b416303d12?auto=format&fit=crop&w=500&q=80",
+                name: "Srinihith",
+                role: "Strategy Expert",
+                image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=500&q=80",
               },
               {
-                name: "Lisa Rodriguez",
-                role: "Content Strategist",
-                image:
-                  "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=500&q=80",
+                name: "Surya E",
+                role: "Business Associate",
+                image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=500&q=80",
               },
-            ].map((member, index) => {
-              // On mobile, hide the fifth team member (index 4)
-              const containerClass =
-                index === 4 ? "hidden md:flex flex-col" : "flex flex-col";
-              return (
-                <div key={index} className={containerClass}>
-                  <div className="w-full aspect-square mb-4 overflow-hidden rounded-[0.4rem]">
-                    <img
-                      src={member.image}
-                      alt={member.name}
-                      className="w-full h-full object-cover  transition-all duration-300"
-                    />
-                  </div>
-                  <h3 className="font-pop font-medium text-lg">
-                    {member.name}
-                  </h3>
-                  <p className="font-inter text-gray-600 text-sm">
-                    {member.role}
-                  </p>
+              {
+                name: "Ashok Reddy",
+                role: "Business Associate",
+                image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=500&q=80",
+              },
+              {
+                name: "Kotla Rahul",
+                role: "Business Associate",
+                image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=500&q=80",
+              },
+              {
+                name: "M. Sandeep",
+                role: "Digital Marketing Associate",
+                image: "https://images.unsplash.com/photo-1519345182560-3f2917c472ef?auto=format&fit=crop&w=500&q=80",
+              },
+              {
+                name: "Madhusudan",
+                role: "Digital Marketing Associate",
+                image: "https://images.unsplash.com/photo-1463453091185-61582044d556?auto=format&fit=crop&w=500&q=80",
+              },
+              {
+                name: "Avinasha",
+                role: "HR Associate",
+                image: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=500&q=80",
+              },
+            ].map((member, index) => (
+              <div key={index} className="flex flex-col">
+                <div className="w-full aspect-square mb-4 overflow-hidden rounded-[0.4rem]">
+                  <img
+                    src={member.image}
+                    alt={member.name}
+                    className="w-full h-full object-cover"
+                  />
                 </div>
-              );
-            })}
+                <h3 className="font-pop font-medium text-lg">
+                  {member.name}
+                </h3>
+                <p className="font-inter text-gray-600 text-sm">
+                  {member.role}
+                </p>
+              </div>
+            ))}
           </div>
         </section>
 
@@ -337,14 +370,14 @@ export default function Home() {
           </h4>
           <Reviews />
         </section>
-        <section className="mt-24">
+        <section className="mt-24 ">
           <h2 className="text-center font-inter text-[#090909] sm:text-5xl xs:text-4xl xss:text-3xl leading-10 relative xs:w-full xss:w-[97%] z-10 mb-10">
             Questions? Answers.
           </h2>
           <QuestionsCards redirect={redirect} />
         </section>
 
-        <section className="mb-24 pt-14 mt-24 bg-dot-[#D6D5D5] dark:bg-dot-[#333333] pb-16 border rounded-2xl border-black dark:border-white md:w-[85vw] sm:w-[90vw] xss:w-[92.5vw] mx-auto w-full">
+        <section className="mb-24 pt-14 max-w-[88rem] mt-24 bg-dot-[#D6D5D5] dark:bg-dot-[#333333] pb-16 border rounded-2xl border-black dark:border-white md:w-[85vw] sm:w-[90vw] xss:w-[92.5vw] mx-auto w-full">
           <div className="relative w-full">
             <h2 className="relative z-10 text-center text-[1.8rem] dark:text-white xss:text-[2.2rem] sm:text-[2.7rem] md:text-[3rem] lg:text-[3.5rem] xss:font-inter xss:font-bold sm:font-semibold sm:tracking-[0.032em] leading-[1.3] sm:leading-[1.12] sm:px-4 xss:px-6 ">
               <span className="sm:px-2 px-1 sm:inline-block backdrop-filter backdrop-blur-[2px]">
@@ -380,7 +413,7 @@ export default function Home() {
             </button>
           </div>
         </section>
-        <footer className="max-w-[77rem] mx-auto">
+        <footer className="max-w-[80rem] mx-auto">
           <Footer /> 
           <p
             className="text-center font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 dark:from-neutral-950 to-neutral-200 dark:to-neutral-800 w-full overflow-hidden whitespace-nowrap"

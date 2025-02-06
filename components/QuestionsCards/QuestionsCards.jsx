@@ -183,7 +183,7 @@ const AdoptionQuestions = ({ redirect }) => {
     updateHoverStyle();
   }, [updateHoverStyle, openQuestions, heights]);
   return (
-    <div className="md:w-[85vw] sm:w-[90vw] xss:w-[92.5vw] relative mx-auto bg-white dark:bg-[#131313] font-[poppins] flex">
+    <div className="md:w-[85vw] sm:w-[90vw] xss:w-[92.5vw] max-w-[88rem] relative mx-auto bg-white dark:bg-[#131313] font-[poppins] flex">
       <div className="flex w-full mx-auto justify-between gap-24">
         <div className="flex-1 relative">
           <div ref={containerRef} className="w-full">

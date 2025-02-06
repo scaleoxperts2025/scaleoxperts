@@ -39,6 +39,24 @@ const categories = [
     icon: "📩",
     image: "https://images.unsplash.com/photo-1552581234-26160f608093?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
   },
+  {
+    title: "Comprehensive Bookkeeping & Accounting Solutions",
+    description: "Streamline your financial operations with our expert bookkeeping and accounting services. We provide accurate, timely, and hassle-free financial management, ensuring your books are always in order. From transaction recording to financial statement preparation, we handle it all, allowing you to focus on growing your business with peace of mind.",
+    icon: "📚",
+    image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+  },
+  {
+    title: "Strategic Virtual CFO Services",
+    description: "Elevate your financial strategy with our Virtual CFO services. We provide expert financial planning, in-depth analysis, and strategic insights to drive your company's growth. Our experienced professionals offer high-level financial guidance, helping you make informed decisions, optimize cash flow, and achieve your business objectives without the cost of a full-time CFO.",
+    icon: "💼",
+    image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+  },
+  {
+    title: "Custom Website & App Development",
+    description: "Enhance your digital presence with our bespoke website and app development services. Leveraging our network of skilled freelancers, we create tailored, responsive websites and powerful applications that align with your brand and business goals. From sleek corporate sites to complex e-commerce platforms and mobile apps, we deliver cutting-edge digital solutions to elevate your online footprint.",
+    icon: "💻",
+    image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2072&q=80"
+  }
 ]
 
 const page = () => {
