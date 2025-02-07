@@ -5,14 +5,10 @@ import Image from 'next/image';
 const Companies = () => {
   const companies = [
     { name: 'F3 FastFood', logo: '/logo1.webp' },
-    { name: 'InnovateX'},
     { name: 'GreenChain', logo: '/logo2.webp' },
     { name: 'HS Dental', logo: '/logo3.webp' },
     { name: 'APAR Industries', logo: '/logo4.webp' },
     { name: 'Sandy Foods', logo: '/logo5.webp' },
-    { name: 'Visionary Labs' },
-    { name: 'AlphaWave'},
-    { name: 'PrimeSolutions' },
     // { name: 'Eclipse Technologies', logo: '/path/to/eclipse-logo.png' }
   ];
 

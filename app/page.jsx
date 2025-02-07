@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useRef } from "react";
-import Link from 'next/link'
+import Link from "next/link";
 import Tooltip from "../components/Tooltip/Tooltip";
 import { useSearchParams } from "next/navigation";
 import Footer from "../components/Footer/Footer";
@@ -24,7 +24,7 @@ function HomeContent() {
   const searchParams = useSearchParams();
 
   const redirect = () => {
-    window.open("https://cal.com/siddharth-meena/15min", "_blank");
+    window.open("https://cal.com/scaleoxperts-zmmvor/30min", "_blank");
   };
 
   const scrollToAboutUs = () => {
@@ -47,20 +47,35 @@ function HomeContent() {
         color="#FFD700"
         refresh
       /> */}
+      <a
+        href="https://wa.me/+918008129875"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 bg-[#25D366] text-white rounded-full shadow-lg hover:bg-[#1fbb58] transition-colors duration-300 z-50 flex items-center justify-center"
+        style={{
+          width: "50px",
+          height: "50px",
+          minWidth: "50px",
+          minHeight: "50px",
+        }}
+      >
+        <i className="ri-whatsapp-line text-2xl"></i>
+      </a>
       <div className="relative z-10">
         <section className="bg-grid-black/[0.04] dark:bg-grid-white/[0.04]">
           <NavBar />
           <main className="xss:pt-[7rem] lg:min-h-[92.5vh] 2xl:min-h-1 sm:pt-[6rem] md:pt-[7.5rem] mb-8 md:mb-[] max-w-[77rem] mx-auto text-gray-800 px-4 xss:px-3">
             <ShinyText />
 
-            <h2 className="text-4xl xss:text-4xl xs:text-5xl sm:text-6xl md:text-7xl sm:mt-[1rem] xss:mt-[1.2rem] text-center leading-[1.1] md:leading-[1.05] font-inter font-semibold">
-              Transform Your Startup into <br className="hidden sm:block" /> an
-              Industry Leader
+            <h2 className="text-2xl xss:text-2xl xs:text-3xl sm:text-4xl md:text-5xl sm:mt-[0.6rem] xss:mt-[0.8rem] text-center leading-[1.2] md:leading-[1.15] font-inter sm:w-[85%] mx-auto font-semibold">
+              Accelerate Your Business Growth with Data-Driven Sales & Strategy
+              Consulting
             </h2>
 
             <h4 className="text-center mt-2 xs:mt-3 font-inter font-medium text-gray-600 text-sm xss:text-xs xs:text-base sm:text-lg w-[95%] xs:w-[90%] sm:w-[80%] md:w-[70%] mx-auto">
-              Turning startup visions into market-leading realities through
-              strategic digital growth.
+              We help MSMEs and startups scale their revenue with proven growth
+              strategies, intelligent automation, and tailored sales
+              optimization techniques.
             </h4>
 
             <div className="hidden sm:flex flex-wrap justify-center items-center mt-3 mb-4 xs:mb-6 gap-2 xs:gap-4 text-gray-600">
@@ -87,6 +102,7 @@ function HomeContent() {
 
             <div className="flex flex-row flex-wrap justify-center mt-4 xs:mt-6 gap-3">
               <button
+                onClick={redirect}
                 className="px-6 xs:px-8 sm:px-10 py-2 xs:py-3 
                   text-sm xs:text-base md:text-lg 
                   bg-[#ff8d1a] border border-[#ff8d1a] 
@@ -94,9 +110,10 @@ function HomeContent() {
                   hover:border-[#fe9328] text-white 
                   font-pop font-medium rounded-full whitespace-nowrap"
               >
-                Inquire Now
+                Free Demo Call
               </button>
               <button
+                onClick={redirect}
                 className="px-6 xs:px-8 sm:px-10 py-2 xs:py-3 
                   text-sm xs:text-base md:text-lg 
                   border border-gray-300 
@@ -105,7 +122,7 @@ function HomeContent() {
                   rounded-full backdrop-filter backdrop-blur-sm 
                   transition-all hover:bg-amber-50 whitespace-nowrap"
               >
-                Book Appointment
+                Free Consultation Call
               </button>
             </div>
 
@@ -305,8 +322,7 @@ function HomeContent() {
               {
                 name: "Mohd Sameer",
                 role: "Co-Founder & Head of Operations",
-                image:
-                  "/mohd.webp",
+                image: "/mohd.webp",
               },
               {
                 name: "Nousheen Fatima",
@@ -317,38 +333,32 @@ function HomeContent() {
               {
                 name: "Gaurav Kumar",
                 role: "Senior Strategy Expert",
-                image:
-                  "/gaurav.webp",
+                image: "/gaurav.webp",
               },
               {
                 name: "Srinihith",
                 role: "Strategy Expert",
-                image:
-                  "/srin.webp",
+                image: "/srin.webp",
               },
               {
                 name: "Ashok Reddy",
                 role: "Business Associate",
-                image:
-                "/ashok.webp",
+                image: "/ashok.webp",
               },
               {
                 name: "Surya E",
                 role: "Business Associate",
-                image:
-                  "/surya.webp",
+                image: "/surya.webp",
               },
               {
                 name: "Kotla Rahul",
                 role: "Business Associate",
-                image:
-                  "/kotla.webp",
+                image: "/kotla.webp",
               },
               {
                 name: "M. Sandeep",
                 role: "Digital Marketing Associate",
-                image:
-                  "/sandeep.webp",
+                image: "/sandeep.webp",
               },
               {
                 name: "Madhusudan",
@@ -428,7 +438,7 @@ function HomeContent() {
 
           <div className="flex mt-8 w-full justify-center">
             <button
-              href="/register"
+              onClick={redirect}
               className="px-[4.5vw] py-[1.9vw] xss:py-[0.65rem] xss:px-[1.18rem] xs:px-[4.2vw] xs:py-[1.5vw] sm:px-[2rem] sm:py-[0.6rem] md:px-[2.5rem] md:py-[0.7rem] lg:px-[2.15rem] lg:py-[0.7rem] bg-[#ff8d1a] border border-[#ff8d1a] transition-all hover:scale-[1.03] hover:bg-[#fe9328] hover:border-[#fe9328] text-white text-[4vw]sm:text-[1.1rem] md:text-[1.2rem] font-pop font-medium rounded-full"
             >
               Schedule an Meeting

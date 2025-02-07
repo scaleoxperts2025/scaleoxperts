@@ -3,17 +3,30 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { useRouter, useSearchParams } from 'next/navigation';
 import { FiMenu, FiX } from "react-icons/fi";
+import { RiArrowDownSLine } from "react-icons/ri";
 
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isInsightsOpen, setIsInsightsOpen] = useState(false);
   const router = useRouter();
   const searchParams = useSearchParams();
 
+  const redirect = () => {
+    window.open("https://cal.com/scaleoxperts-zmmvor/30min", "_blank");
+  };
+
   const navItems = [
     { name: "Home", route: "/" },
-    { name: "About", route: "/?scroll=aboutus" },
+    { name: "About", route: "/about" },
     { name: "Services", route: "/services" },
-    { name: "Careers", route: "https://www.linkedin.com/company/scaleoxperts" },
+    { 
+      name: "Insights", 
+      subitems: [
+        { name: "Blog", route: "https://google.com/" },
+        { name: "Clients", route: "/clients" }
+      ]
+    },
+    { name: "Careers", route: "/careers" },
   ];
 
   const handleNavigation = (route, e) => {
@@ -28,6 +41,8 @@ const NavBar = () => {
       router.push('/services');
     } else if (route.startsWith('http')) {
       window.open(route, '_blank');
+    } else {
+      router.push(route);
     }
   };
 
@@ -65,31 +80,57 @@ const NavBar = () => {
       </Link>
 
       {/* Desktop Navigation */}
-      <ul className="hidden md:flex space-x-8">
+      <ul className="hidden lg:flex space-x-8">
         {navItems.map((item) => (
-          <li key={item.name}>
-            <a
-              href={item.route}
-              onClick={(e) => handleNavigation(item.route, e)}
-              className="text-[#282828] hover:text-[#232323] text-sm sm:text-base font-inter transition-colors duration-300 relative group uppercase"
-            >
-              {item.name}
-              <span className="absolute left-0 right-0 bottom-[-1px] h-[1.3px] bg-[#282828] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
-            </a>
+          <li key={item.name} className="relative group">
+            {item.subitems ? (
+              <div
+                className="text-[#282828] hover:text-[#232323] text-sm sm:text-base font-inter transition-colors duration-300 relative group uppercase cursor-pointer flex items-center"
+                onMouseEnter={() => setIsInsightsOpen(true)}
+                onMouseLeave={() => setIsInsightsOpen(false)}
+              >
+                {item.name}
+                <RiArrowDownSLine className="ml-1 transition-transform duration-300 group-hover:rotate-180" />
+                <span className="absolute left-0 right-0 bottom-[-1px] h-[1.3px] bg-[#282828] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
+                
+                {/* Dropdown */}
+                <div className={`absolute top-full left-0 mt-2 w-48 bg-white shadow-lg rounded-md overflow-hidden transition-all duration-300 ease-in-out z-50 ${isInsightsOpen ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible -translate-y-2'}`}>
+                  {item.subitems.map((subitem) => (
+                    <a
+                      key={subitem.name}
+                      href={subitem.route}
+                      onClick={(e) => handleNavigation(subitem.route, e)}
+                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition-colors duration-200"
+                    >
+                      {subitem.name}
+                    </a>
+                  ))}
+                </div>
+              </div>
+            ) : (
+              <a
+                href={item.route}
+                onClick={(e) => handleNavigation(item.route, e)}
+                className="text-[#282828] hover:text-[#232323] text-sm sm:text-base font-inter transition-colors duration-300 relative group uppercase"
+              >
+                {item.name}
+                <span className="absolute left-0 right-0 bottom-[-1px] h-[1.3px] bg-[#282828] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
+              </a>
+            )}
           </li>
         ))}
       </ul>
 
       {/* Mobile Menu Button and Contact */}
-      <div className="hidden md:flex">
-        <Link
-          href="/get-started"
+      <div className="hidden lg:flex">
+        <button
+          onClick={redirect}
           className="ml-4 inline-flex rounded-full h-[2.85rem] px-7 text-white bg-[#ff8d1a] hover:bg-[#fe9328] transition-all duration-300 ease-in-out transform hover:scale-[1.035] hover:shadow-[0_0_15px_rgba(255,165,0,0.3)] text-lg items-center justify-center"
         >
           Contact Us
-        </Link>
+        </button>
       </div>
-      <div className="flex md:hidden items-center gap-4">
+      <div className="flex lg:hidden items-center gap-4">
         <button
           onClick={() => setIsOpen(!isOpen)}
           className="p-2 text-gray-600 hover:text-gray-900 focus:outline-none transition-colors"
@@ -129,25 +170,55 @@ const NavBar = () => {
             <ul className="flex flex-col space-y-6 mb-auto">
               {navItems.map((item) => (
                 <li key={item.name}>
-                  <a
-                    href={item.route}
-                    className="text-2xl text-[#1a1a1a] font-inter hover:text-[#0b0b0b] transition-colors duration-300 relative group"
-                    onClick={(e) => handleNavigation(item.route, e)}
-                  >
-                    {item.name}
-                    <span className="absolute left-0 right-0 bottom-[-1px] h-[1.3px] bg-[#1a1a1a] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
-                  </a>
+                  {item.subitems ? (
+                    <div className="space-y-2">
+                      <button
+                        onClick={() => setIsInsightsOpen(!isInsightsOpen)}
+                        className="text-2xl text-[#1a1a1a] font-inter flex items-center justify-between w-full"
+                      >
+                        {item.name}
+                        <RiArrowDownSLine className={`ml-2 transition-transform duration-300 ${isInsightsOpen ? 'rotate-180' : ''}`} />
+                      </button>
+                      <div className={`space-y-2 overflow-hidden transition-all duration-300 ${isInsightsOpen ? 'max-h-40 opacity-100' : 'max-h-0 opacity-0'}`}>
+                        {item.subitems.map((subitem) => (
+                          <a
+                            key={subitem.name}
+                            href={subitem.route}
+                            className="block text-xl text-[#1a1a1a] font-inter hover:text-[#0b0b0b] transition-colors duration-300 pl-4"
+                            onClick={(e) => {
+                              handleNavigation(subitem.route, e);
+                              setIsOpen(false);
+                            }}
+                          >
+                            {subitem.name}
+                          </a>
+                        ))}
+                      </div>
+                    </div>
+                  ) : (
+                    <a
+                      href={item.route}
+                      className="text-2xl text-[#1a1a1a] font-inter hover:text-[#0b0b0b] transition-colors duration-300 relative group"
+                      onClick={(e) => {
+                        handleNavigation(item.route, e);
+                        setIsOpen(false);
+                      }}
+                    >
+                      {item.name}
+                      <span className="absolute left-0 right-0 bottom-[-1px] h-[1.3px] bg-[#1a1a1a] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
+                    </a>
+                  )}
                 </li>
               ))}
             </ul>
 
-            <Link
-              href="/get-started"
+            <button
+              
               className="w-full py-3 text-center rounded-full text-white bg-[#ff8d1a] hover:bg-[#fe9328] transition-all duration-300 block text-lg mt-8"
-              onClick={() => setIsOpen(false)}
+              onClick={redirect}
             >
               Contact Us
-            </Link>
+            </button>
           </div>
         </div>
       </div>

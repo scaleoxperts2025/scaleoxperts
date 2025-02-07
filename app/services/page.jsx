@@ -2,6 +2,7 @@
 import React, { useEffect, useRef, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 import NavBar from "@/components/NavBar/NavBar";
+import Footer from "@/components/Footer/Footer";
 import Image from "next/image";
 
 const categories = [
@@ -93,6 +94,10 @@ const PageContent = () => {
   const scrollTo = searchParams?.get("scroll");
   const serviceRefs = useRef({});
 
+  const redirect = () => {
+    window.open("https://cal.com/scaleoxperts-zmmvor/30min", "_blank");
+  };
+
   useEffect(() => {
     if (scrollTo && serviceRefs.current[scrollTo]) {
       serviceRefs.current[scrollTo].scrollIntoView({ behavior: "smooth" });
@@ -101,8 +106,10 @@ const PageContent = () => {
 
   return (
     <div className="min-h-screen pb-[2rem] bg-white relative overflow-hidden">
-      <NavBar />
-      <div className="z-10 max-w-[88rem] pt-[2rem] mx-auto">
+      <div className="max-w-[88rem] -z-10 mx-auto">
+      <div className="z-50">
+            <NavBar />    
+        </div>
         {categories.map((category, index) => (
           <section
             key={index}
@@ -131,13 +138,14 @@ const PageContent = () => {
                 {category.description}
               </p>
               <div className="flex space-x-4">
-                <button className="bg-[#ff8d1a] text-white px-6 py-2 rounded-full hover:bg-[#fe9328] hover:scale-[1.03] transition duration-300">
+                <button onClick={redirect} className="bg-[#ff8d1a] text-white px-6 py-2 rounded-full hover:bg-[#fe9328] hover:scale-[1.03] transition duration-300">
                   Schedule a Meeting
                 </button>
               </div>
             </div>
           </section>
         ))}
+        <Footer />
       </div>
     </div>
   );
