@@ -1,7 +1,7 @@
 'use client'
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
-import { useRouter, useSearchParams } from 'next/navigation';
+import { useRouter} from 'next/navigation';
 import { FiMenu, FiX } from "react-icons/fi";
 import { RiArrowDownSLine } from "react-icons/ri";
 
@@ -9,7 +9,6 @@ const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isInsightsOpen, setIsInsightsOpen] = useState(false);
   const router = useRouter();
-  const searchParams = useSearchParams();
 
   const redirect = () => {
     window.open("https://cal.com/scaleoxperts-zmmvor/30min", "_blank");
