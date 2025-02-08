@@ -1,151 +1,168 @@
 import React, { useState, useEffect } from "react";
 import "./Reviews.css";
+import Image from "next/image";
 
 // Updated testimonial data
 const testimonials = [
   {
     id: 1,
-    name: "John Doe",
-    position: "CEO, Company A",
+    name: "Rajesh Kumar",
+    position: "CEO, TechInnovate India",
     quote:
-      "This digital marketing agency has completely transformed our business. Their strategies and insights have increased our ROI tremendously.",
-    image: "https://randomuser.me/api/portraits/men/1.jpg",
-  },
-  {
-    id: 2,
-    name: "Jane Smith",
-    position: "CTO, Company B",
-    quote:
-      "Their innovative approach to digital marketing has boosted our online presence and engagement like never before.",
-    image: "https://randomuser.me/api/portraits/women/2.jpg",
-  },
-  {
-    id: 3,
-    name: "Mike Johnson",
-    position: "Founder, Startup X",
-    quote:
-      "Our partnership with this digital marketing agency has been extremely beneficial. Their creativity and data-driven strategies are unmatched.",
-    image: "https://randomuser.me/api/portraits/men/3.jpg",
-  },
-  {
-    id: 4,
-    name: "Emily Brown",
-    position: "COO, Tech Innovators",
-    quote:
-      "The results from this digital marketing agency are impressive; they've elevated our brand to new heights.",
-    image: "https://randomuser.me/api/portraits/women/4.jpg",
-  },
-  {
-    id: 5,
-    name: "Alex Chen",
-    position: "Lead Developer, AI Solutions",
-    quote:
-      "We appreciate this digital marketing agency for their exceptional service and commitment to delivering measurable results.",
-    image: "https://randomuser.me/api/portraits/men/5.jpg",
-  },
-  {
-    id: 6,
-    name: "Sarah Thompson",
-    position: "Data Scientist, Research Labs",
-    quote:
-      "This digital marketing agency combines creativity with analytics, creating a winning formula for success.",
-    image: "https://randomuser.me/api/portraits/women/6.jpg",
-  },
-  {
-    id: 7,
-    name: "Robert Garcia",
-    position: "Marketing Director, Global Brands",
-    quote:
-      "Amazing digital marketing agency! Their expertise has helped us optimize our campaigns and reach customers globally.",
-    image: "https://randomuser.me/api/portraits/men/7.jpg",
-  },
-  {
-    id: 8,
-    name: "Lisa Wong",
-    position: "UX Designer, Creative Solutions",
-    quote:
-      "Their digital marketing strategies are innovative and effective, truly making a difference in our growth.",
-    image: "https://randomuser.me/api/portraits/women/8.jpg",
-  },
-  {
-    id: 9,
-    name: "David Patel",
-    position: "CFO, Financial Tech",
-    quote:
-      "This agency's digital marketing solutions are top-notch and have significantly boosted our brand awareness.",
-    image: "https://randomuser.me/api/portraits/men/9.jpg",
-  },
-  {
-    id: 10,
-    name: "Emma Wilson",
-    position: "HR Manager, People First",
-    quote:
-      "Choosing this digital marketing agency was the best decision we made; their strategies are very effective.",
-    image: "https://randomuser.me/api/portraits/women/10.jpg",
-  },
-  {
-    id: 11,
-    name: "Chris Taylor",
-    position: "Operations Manager, Logistics Pro",
-    quote:
-      "The digital marketing agency's approach is modern and innovative, consistently driving excellent results.",
+      "The team was highly professional and helped us revamp our entire online strategy. We've seen a 60% increase in lead generation.",
     image: "https://randomuser.me/api/portraits/men/11.jpg",
   },
   {
-    id: 12,
-    name: "Olivia Martinez",
-    position: "Product Manager, Innovate Inc.",
+    id: 2,
+    name: "Priya Sharma",
+    position: "CTO, DataSolutions Pvt Ltd",
     quote:
-      "This digital marketing agency has redefined our marketing strategies, delivering outstanding growth and engagement.",
-    image: "https://randomuser.me/api/portraits/women/12.jpg",
+      "Our website traffic doubled within three months thanks to their innovative SEO and content marketing strategies.",
+    image: "https://randomuser.me/api/portraits/women/21.jpg",
+  },
+  {
+    id: 3,
+    name: "Amit Patel",
+    position: "Founder, StartupX India",
+    quote:
+      "Their social media campaigns gave our startup the visibility it needed. We gained thousands of organic followers in just a few months!",
+    image: "https://randomuser.me/api/portraits/men/34.jpg",
+  },
+  {
+    id: 4,
+    name: "Neha Gupta",
+    position: "COO, IndiaTech Innovators",
+    quote:
+      "Exceptional service! Their team understands the Indian market well and tailored strategies that worked perfectly for us.",
+    image: "https://randomuser.me/api/portraits/women/45.jpg",
+  },
+  {
+    id: 5,
+    name: "Vikram Singh",
+    position: "Lead Developer, AI Solutions India",
+    quote:
+      "Their digital marketing team optimized our ad spend, leading to a 40% reduction in costs while increasing conversions.",
+    image: "https://randomuser.me/api/portraits/men/52.jpg",
+  },
+  {
+    id: 6,
+    name: "Ananya Reddy",
+    position: "Data Scientist, Research Labs Bangalore",
+    quote:
+      "We struggled with branding, but their team gave us a fresh perspective. Our engagement rates have never been higher.",
+    image: "https://randomuser.me/api/portraits/women/61.jpg",
+  },
+  {
+    id: 7,
+    name: "Arjun Mehta",
+    position: "Marketing Director, Global Brands India",
+    quote:
+      "I’ve worked with multiple agencies, but none delivered like this one. The ROI on our PPC campaigns has been phenomenal!",
+    image: "https://randomuser.me/api/portraits/men/72.jpg",
+  },
+  {
+    id: 8,
+    name: "Kavita Desai",
+    position: "UX Designer, Creative Solutions Mumbai",
+    quote:
+      "Their branding expertise completely transformed how we present ourselves. Our brand identity is now stronger than ever.",
+    image: "https://randomuser.me/api/portraits/women/81.jpg",
+  },
+  {
+    id: 9,
+    name: "Rahul Kapoor",
+    position: "CFO, FinTech India",
+    quote:
+      "The insights we gained from their analytics team have shaped our business decisions. Their data-driven approach is excellent.",
+    image: "https://randomuser.me/api/portraits/men/85.jpg",
+  },
+  {
+    id: 10,
+    name: "Meera Iyer",
+    position: "HR Manager, People First India",
+    quote:
+      "Not only did they improve our employer branding, but their strategies also helped us attract top-tier talent.",
+    image: "https://randomuser.me/api/portraits/women/91.jpg",
+  },
+  {
+    id: 11,
+    name: "Sanjay Verma",
+    position: "Operations Manager, Logistics Pro India",
+    quote:
+      "They built a seamless digital presence for our logistics company, improving customer engagement and client retention.",
+    image: "https://randomuser.me/api/portraits/men/94.jpg",
+  },
+  {
+    id: 12,
+    name: "Pooja Malhotra",
+    position: "Product Manager, Innovate Inc. Delhi",
+    quote:
+      "I never imagined our local brand could have such a strong online presence. Their digital strategies exceeded our expectations.",
+    image: "https://randomuser.me/api/portraits/women/96.jpg",
   },
   {
     id: 13,
-    name: "Ryan Lee",
-    position: "Security Analyst, Cyber Shield",
+    name: "Karthik Nair",
+    position: "Security Analyst, Cyber Shield India",
     quote:
-      "A trailblazer in digital marketing, their campaigns deliver remarkable ROI and brand visibility.",
-    image: "https://randomuser.me/api/portraits/men/13.jpg",
+      "They not only helped with marketing but also ensured our website was secure and fully optimized. A great team to work with!",
+    image: "https://randomuser.me/api/portraits/men/97.jpg",
   },
   {
     id: 14,
-    name: "Sophia Anderson",
-    position: "Content Strategist, Media Minds",
+    name: "Anjali Menon",
+    position: "Content Strategist, Media Minds Kochi",
     quote:
-      "Their digital marketing strategies are creative and impactful, truly transforming our market approach.",
-    image: "https://randomuser.me/api/portraits/women/14.jpg",
+      "The content marketing strategies they implemented helped our blog rank in the top 3 search results in just 6 months.",
+    image: "https://randomuser.me/api/portraits/women/98.jpg",
   },
   {
     id: 15,
-    name: "Daniel Kim",
-    position: "CIO, Tech Frontiers",
+    name: "Vivek Choudhury",
+    position: "CIO, Tech Frontiers Hyderabad",
     quote:
-      "Impressive performance by this digital marketing agency; their techniques have boosted our business metrics.",
-    image: "https://randomuser.me/api/portraits/men/15.jpg",
+      "Their AI-powered analytics gave us a fresh perspective on user behavior. We optimized our funnel and increased sales by 30%.",
+    image: "https://randomuser.me/api/portraits/men/99.jpg",
   },
   {
     id: 16,
-    name: "Rachel Green",
-    position: "Customer Success Manager, Happy Clients",
+    name: "Riya Saxena",
+    position: "Customer Success Manager, Happy Clients Pune",
     quote:
-      "The digital marketing agency's insights and execution are exceptionally professional and results-driven.",
-    image: "https://randomuser.me/api/portraits/women/16.jpg",
+      "Working with them has been a smooth experience. Our customer engagement metrics have significantly improved!",
+    image: "https://randomuser.me/api/portraits/women/100.jpg",
   },
   {
     id: 17,
-    name: "Thomas Wright",
-    position: "Research Scientist, BioTech Innovations",
+    name: "Aditya Joshi",
+    position: "Research Scientist, BioTech Innovations Chennai",
     quote:
-      "Working with this digital marketing agency has been a game-changer, showcasing innovative strategies in every campaign.",
-    image: "https://randomuser.me/api/portraits/men/17.jpg",
+      "They helped our research firm gain credibility through targeted PR and thought leadership campaigns.",
+    image: "https://randomuser.me/api/portraits/men/88.jpg",
   },
   {
     id: 18,
-    name: "Natalie Clark",
-    position: "Sustainability Officer, Green Future",
+    name: "Nandini Rao",
+    position: "Sustainability Officer, Green Future Bengaluru",
     quote:
-      "Their digital marketing expertise has accelerated our growth, making them a valuable partner in our success.",
-    image: "https://randomuser.me/api/portraits/women/18.jpg",
+      "Thanks to their strategies, we connected with the right audience and expanded our impact in the sustainability space.",
+    image: "https://randomuser.me/api/portraits/women/66.jpg",
+  },
+  {
+    id: 19,
+    name: "Suresh Iyer",
+    position: "Director, Retail Vision Mumbai",
+    quote:
+      "We struggled with online advertising before, but their approach increased our e-commerce sales by 50%.",
+    image: "https://randomuser.me/api/portraits/men/22.jpg",
+  },
+  {
+    id: 20,
+    name: "Deepika Sharma",
+    position: "Founder, Wellness Hub India",
+    quote:
+      "Their wellness-focused digital campaigns helped us gain thousands of new subscribers in record time.",
+    image: "https://randomuser.me/api/portraits/women/33.jpg",
   },
 ];
 
@@ -153,7 +170,13 @@ const ReviewChild = ({ name, position, quote, image }) => {
   return (
     <div className="child w-full rounded-3xl bg-[#f4f4f4] p-8 pb-8 mb-6 shadow-lg">
       <div className="flex">
-        <img src={image} className="h-10 w-10 rounded-full" alt={name} />
+        <Image
+          src={image}
+          width={40}
+          height={40}
+          className="rounded-full"
+          alt={name}
+        />
         <div className="flex flex-col ml-4">
           <h2 className="font-semibold text-gray-800">{name}</h2>
           <h3 className="text-sm text-gray-600">{position}</h3>

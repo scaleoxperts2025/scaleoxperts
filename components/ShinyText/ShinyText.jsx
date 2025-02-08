@@ -12,8 +12,8 @@ export const ShinyText = () => {
       >
         <div className="inline-flex items-center justify-center px-3 xs:px-4 py-1">
           <AnimatedShinyText className="whitespace-nowrap">
-            <span className="text-xs xs:text-sm sm:text-base">
-              ✨ Best Digital Marketing Agency Globally
+            <span className="text-[0.69rem] xs:text-sm sm:text-base">
+              ✨ Driven by Expertise, Built on Impact & Loved by clients
             </span>
           </AnimatedShinyText>
           <ArrowRightIcon className="ml-1 xs:ml-2 h-3 w-3 xs:h-4 xs:w-4 transition-transform duration-300 ease-in-out group-hover:translate-x-0.5" />

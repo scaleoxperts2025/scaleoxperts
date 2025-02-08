@@ -124,7 +124,7 @@ const ContactSection = () => {
             View Openings on LinkedIn
           </a>
           <a
-            href="mailto:careers@scaleoxperts.com"
+            href="mailto:scaleoxperts@gmail.com"
             className="inline-flex items-center px-8 py-4 bg-orange-600 text-white rounded-full text-lg font-semibold hover:bg-orange-700 transition-all duration-300 hover:scale-105 active:scale-95"
           >
             <RiMailFill className="mr-2 text-2xl" />

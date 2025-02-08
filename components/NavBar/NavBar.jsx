@@ -21,7 +21,7 @@ const NavBar = () => {
     { 
       name: "Insights", 
       subitems: [
-        { name: "Blog", route: "https://google.com/" },
+        { name: "Blog", route: "http://scaleoxperts.wordpress.com" },
         { name: "Clients", route: "/clients" }
       ]
     },

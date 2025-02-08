@@ -9,7 +9,15 @@ const Companies = () => {
     { name: 'HS Dental', logo: '/logo3.webp' },
     { name: 'APAR Industries', logo: '/logo4.webp' },
     { name: 'Sandy Foods', logo: '/logo5.webp' },
-    // { name: 'Eclipse Technologies', logo: '/path/to/eclipse-logo.png' }
+    { name: 'SteelX Industries', logo: '/steel.webp' },
+    { name: 'SteelWave Industries', logo: '/steel2.webp' },
+    { name: 'Funkiezz Clothing Co.', logo: '/fun.webp' },
+    { name: 'SmartWonders Educational Institutions', logo: '/smart.webp' },
+    { name: 'Vishwakarma Manufacturing Co.', logo: '/vish.webp' },
+    { name: 'MGR Builders & Developers', logo: '/mgr.webp' },
+    { name: 'NKS Food Products', logo: '/nx.webp' },
+    { name: 'Prime Auto Components', logo: '/pime.webp' },
+    { name: 'Divija Builders', logo: '/divija.webp' },
   ];
 
   return (
@@ -57,7 +65,7 @@ const Companies = () => {
         }
 
         .animate-ticker {
-          animation: ticker 30s linear infinite;
+          animation: ticker 45s linear infinite;
         }
       `}</style>
     </div>

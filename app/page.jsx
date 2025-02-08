@@ -110,9 +110,9 @@ function HomeContent() {
                   hover:border-[#fe9328] text-white 
                   font-pop font-medium rounded-full whitespace-nowrap"
               >
-                Free Demo Call
+                Get a Free Call
               </button>
-              <button
+              {/* <button
                 onClick={redirect}
                 className="px-6 xs:px-8 sm:px-10 py-2 xs:py-3 
                   text-sm xs:text-base md:text-lg 
@@ -122,8 +122,8 @@ function HomeContent() {
                   rounded-full backdrop-filter backdrop-blur-sm 
                   transition-all hover:bg-amber-50 whitespace-nowrap"
               >
-                Free Consultation Call
-              </button>
+                Free Demo Call
+              </button> */}
             </div>
 
             <div className="mt-8 xss:mt-16 sm:mt-16">
@@ -167,9 +167,9 @@ function HomeContent() {
             <div className="flex-grow mb-20 my-auto flex items-center justify-center xss:mt-8 sm:mt-12">
               <div className="flex w-full justify-between sm:justify-start sm:space-x-14 flex-nowrap overflow-hidden">
                 {[
-                  { number: "150+", text: "Customers served" },
-                  { number: "100%", text: "Client satisfaction" },
-                  { number: "30+", text: "Partnerships" },
+                  { number: "60+", text: "Customers served" },
+                  { number: "95%", text: "Client satisfaction" },
+                  { number: "15+", text: "Partnerships" },
                 ].map((stat, index) => (
                   <div key={index} className=" sm:flex-none flex-1 px-2">
                     <h2 className="text-4xl xs:text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-pop text-[#ff8d1a] leading-tight">
@@ -361,20 +361,20 @@ function HomeContent() {
                 image: "/sandeep.webp",
               },
               {
-                name: "Madhusudan",
-                role: "Digital Marketing Associate",
+                name: "P Veera Sai",
+                role: "Marketing Associate",
                 image:
-                  "https://images.unsplash.com/photo-1463453091185-61582044d556?auto=format&fit=crop&w=500&q=80",
+                  "/veer.webp",
               },
               {
                 name: "Avinasha",
                 role: "HR Associate",
                 image:
-                  "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=500&q=80",
+                  "https://icon-library.com/images/female-user-icon/female-user-icon-8.jpg",
               },
             ].map((member, index) => (
               <div key={index} className="flex flex-col group">
-                <div className="w-full aspect-square mb-4 overflow-hidden rounded-[0.4rem]">
+                <div className="w-full aspect-square mb-4 overflow-hidden rounded-[0.4rem] border border-[#e3e3e3]">
                   <img
                     src={member.image}
                     alt={member.name}
@@ -410,6 +410,154 @@ function HomeContent() {
           <QuestionsCards redirect={redirect} />
         </section>
 
+        <section className="w-full pt-20 pb-10">
+          <div className="max-w-[80rem] mx-auto px-4">
+            {/* <h2 className="text-center font-pop font-bold text-4xl md:text-5xl text-gray-800 mb-12">
+              Let's Connect
+            </h2> */}
+            <div className="bg-white rounded-3xl shadow-2xl overflow-hidden transition-all duration-300 hover:shadow-3xl">
+              <div className="md:flex">
+                <div className="md:w-2/5 bg-gradient-to-r from-[#f97316] to-[#f97416ea] p-8 md:p-12 text-white">
+                  <h3 className="text-3xl font-mono font-semibold mb-6">
+                    Contact Us
+                  </h3>
+                  <p className="mb-8 font-inter text-orange-100">
+                    We'd love to hear from you. Drop us a message and we'll get
+                    back to you as soon as possible.
+                  </p>
+                  <div className="space-y-6">
+                    <div className="flex items-center group">
+                      <div className="w-12 h-12 border border-orange-300 rounded-full flex-shrink-0 flex items-center justify-center mr-4">
+                        <svg
+                          className="w-6 h-6 text-orange-100"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+                          />
+                        </svg>
+                      </div>
+                      <span className="font-inter text-orange-100">
+                        +1 (555) 123-4567
+                      </span>
+                    </div>
+                    <div className="flex items-center group">
+                      <div className="w-12 h-12 border border-orange-300 rounded-full flex-shrink-0 flex items-center justify-center mr-4">
+                        <svg
+                          className="w-6 h-6 text-orange-100"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                          />
+                        </svg>
+                      </div>
+                      <span className="font-inter text-orange-100">
+                        info@scaleoxperts.com
+                      </span>
+                    </div>
+                    <div className="flex items-start group">
+                      <div className="w-12 h-12 border border-orange-300 rounded-full flex-shrink-0 flex items-center justify-center mr-4">
+                        <svg
+                          className="w-6 h-6 text-orange-100"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                          />
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+                          />
+                        </svg>
+                      </div>
+                      <span className="font-inter text-orange-100">
+                        3rd Floor, Oyster Complex, Somajiguda, Hyderabad, India
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div className="md:w-3/5 p-4 sm:p-12">
+                  <form action="https://formspree.io/f/xqaelgar" method="POST" className="space-y-6">
+                    <div>
+                      <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1 font-pop">
+                        Name
+                      </label>
+                      <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 transition-all duration-300 font-inter"
+                        placeholder="Your Name"
+                        required
+                      />
+                    </div>
+                    <div>
+                      <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1 font-pop">
+                        Email
+                      </label>
+                      <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 transition-all duration-300 font-inter"
+                        placeholder="your@email.com"
+                        required
+                      />
+                    </div>
+                    <div>
+                      <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1 font-pop">
+                        Message
+                      </label>
+                      <textarea
+                        id="message"
+                        name="message"
+                        rows="4"
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 transition-all duration-300 font-inter"
+                        placeholder="Your message here..."
+                        required
+                      ></textarea>
+                    </div>
+                    <div>
+                      <button
+                        type="submit"
+                        className="w-full px-6 xs:px-8 sm:px-10 py-3 xs:py-3 
+                        text-sm xs:text-base md:text-lg 
+                        bg-[#ff801e] border border-[#ff8d1a] 
+                        transition-all hover:scale-[1.03] hover:bg-[#fe9328] 
+                        hover:border-[#fe9328] text-white 
+                        font-pop font-medium rounded-full whitespace-nowrap"
+                      >
+                        Send Message
+                      </button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         <section className="mb-24 pt-14 max-w-[88rem] mt-24 bg-dot-[#D6D5D5] dark:bg-dot-[#333333] pb-16 border rounded-2xl border-black dark:border-white md:w-[85vw] sm:w-[90vw] xss:w-[92.5vw] mx-auto w-full">
           <div className="relative w-full">
             <h2 className="relative z-10 text-center text-[1.8rem] dark:text-white xss:text-[2.2rem] sm:text-[2.7rem] md:text-[3rem] lg:text-[3.5rem] xss:font-inter xss:font-bold sm:font-semibold sm:tracking-[0.032em] leading-[1.3] sm:leading-[1.12] sm:px-4 xss:px-6 ">
@@ -441,7 +589,7 @@ function HomeContent() {
               onClick={redirect}
               className="px-[4.5vw] py-[1.9vw] xss:py-[0.65rem] xss:px-[1.18rem] xs:px-[4.2vw] xs:py-[1.5vw] sm:px-[2rem] sm:py-[0.6rem] md:px-[2.5rem] md:py-[0.7rem] lg:px-[2.15rem] lg:py-[0.7rem] bg-[#ff8d1a] border border-[#ff8d1a] transition-all hover:scale-[1.03] hover:bg-[#fe9328] hover:border-[#fe9328] text-white text-[4vw]sm:text-[1.1rem] md:text-[1.2rem] font-pop font-medium rounded-full"
             >
-              Schedule an Meeting
+              Book Free consultation call
               <i className="ri-arrow-right-line ml-2 text-lg"></i>
             </button>
           </div>
