@@ -123,8 +123,8 @@ const PageContent = () => {
                 <Image
                   src={category.image}
                   alt={category.title}
-                  width={500}
-                  height={350}
+                  width={550}  // Increased width
+                  height={375} // Increased height
                   className="rounded-[0.45rem] shadow-lg object-cover"
                 />
               </div>

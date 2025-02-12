@@ -21,6 +21,7 @@ export default function Home() {
 
 function HomeContent() {
   const aboutUsRef = useRef(null);
+  const contactUsRef = useRef(null);
   const searchParams = useSearchParams();
 
   const redirect = () => {
@@ -32,9 +33,20 @@ function HomeContent() {
     window.history.pushState({}, "", "/");
   };
 
+  const scrollToContactUs = () => {
+    contactUsRef.current?.scrollIntoView({ behavior: "smooth" });
+    window.history.pushState({}, "", "/");
+  };
+
   useEffect(() => {
     if (searchParams.get("scroll") === "aboutus") {
       setTimeout(scrollToAboutUs, 100);
+    }
+  }, [searchParams]);
+
+  useEffect(() => {
+    if (searchParams.get("scroll") === "contactus") {
+      setTimeout(scrollToContactUs, 100);
     }
   }, [searchParams]);
 
@@ -80,10 +92,10 @@ function HomeContent() {
 
             <div className="hidden sm:flex flex-wrap justify-center items-center mt-3 mb-4 xs:mb-6 gap-2 xs:gap-4 text-gray-600">
               {[
-                "Custom Design & Dev",
-                "Expert Senior Talent",
-                "Pause or Cancel Anytime",
-                "48-Hour Feedback",
+                "Customized strategies",
+                "Expert Senior talent",
+                "Customized Packages",
+                "Dedicated Account Manager",
               ].map((text, index) => (
                 <div key={index} className="flex items-center px-1 xs:px-0">
                   <svg
@@ -128,7 +140,7 @@ function HomeContent() {
 
             <div className="mt-8 xss:mt-16 sm:mt-16">
               <h2 className="text-center mt-2 xs:mt-3 font-inter font-medium text-gray-600 text-sm xs:text-base sm:text-lg w-[95%] mx-auto">
-                Trusted by over 150 Businesses Globally
+                Trusted by 60+ Happy Clients
               </h2>
               <div className="mt-2.5 xs:mt-2.5 sm:mb-2 xss:mb-14">
                 <Companies />
@@ -168,7 +180,7 @@ function HomeContent() {
               <div className="flex w-full justify-between sm:justify-start sm:space-x-14 flex-nowrap overflow-hidden">
                 {[
                   { number: "60+", text: "Customers served" },
-                  { number: "95%", text: "Client satisfaction" },
+                  { number: "95%+", text: "Client satisfaction" },
                   { number: "15+", text: "Partnerships" },
                 ].map((stat, index) => (
                   <div key={index} className=" sm:flex-none flex-1 px-2">
@@ -328,7 +340,7 @@ function HomeContent() {
                 name: "Nousheen Fatima",
                 role: "Co-Founder & Advisory Partner",
                 image:
-                  "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=500&q=80",
+                  "https://icon-library.com/images/female-user-icon/female-user-icon-8.jpg",
               },
               {
                 name: "Gaurav Kumar",
@@ -415,7 +427,7 @@ function HomeContent() {
             {/* <h2 className="text-center font-pop font-bold text-4xl md:text-5xl text-gray-800 mb-12">
               Let's Connect
             </h2> */}
-            <div className="bg-white rounded-3xl shadow-2xl overflow-hidden transition-all duration-300 hover:shadow-3xl">
+            <div ref={contactUsRef} className="bg-white rounded-3xl shadow-2xl overflow-hidden transition-all duration-300 hover:shadow-3xl">
               <div className="md:flex">
                 <div className="md:w-2/5 bg-gradient-to-r from-[#f97316] to-[#f97416ea] p-8 md:p-12 text-white">
                   <h3 className="text-3xl font-mono font-semibold mb-6">
@@ -444,7 +456,7 @@ function HomeContent() {
                         </svg>
                       </div>
                       <span className="font-inter text-orange-100">
-                        +1 (555) 123-4567
+                        +91 8008129875
                       </span>
                     </div>
                     <div className="flex items-center group">
@@ -465,7 +477,7 @@ function HomeContent() {
                         </svg>
                       </div>
                       <span className="font-inter text-orange-100">
-                        info@scaleoxperts.com
+                        scaleoxperts@gmail.com
                       </span>
                     </div>
                     <div className="flex items-start group">

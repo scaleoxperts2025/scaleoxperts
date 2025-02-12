@@ -92,7 +92,10 @@ const AdoptionQuestions = ({ redirect }) => {
   const questions = useMemo(
     () => [
       "Why should I choose ScaleOXperts over other firms?",
+      "How can I get started with Scaloxperts?",
+      "What kind of businesses can benefit the most from your services?",
       "How do you ensure measurable business growth?",
+      "What is the cost structure for your services?",
       "What industries do you specialize in?",
       "How long does it take to see results?",
       "What if I need ongoing support after the initial consultation?",
@@ -103,7 +106,10 @@ const AdoptionQuestions = ({ redirect }) => {
   const answers = useMemo(
     () => [
       "Unlike generic consulting firms, we provide tailored, hands-on strategies specifically designed for MSMEs and startups. Our data-driven approach ensures sustainable growth, increased revenue, and enhanced brand visibility.",
+      "Schedule a free consultation call  on our website or connect to us via our contact us page.",
       "We focus on actionable, results-driven strategies. From sales optimization and lead generation to automation and digital marketing, we implement solutions that drive tangible improvements in revenue, conversions, and brand reach.",
+      "At ScaleOXperts, we specialize in manufacturing, real estate, education, and hospitality, offering customized growth strategies for startups, mid-sized firms, and large enterprises. We help businesses scale, improve efficiency, and enhance market positioning.",
+      "At ScaleOXperts, we offer customized service packages with flexible pricing, tailored to your business size, industry, and goals. Book a free consultation to get a personalized quote and maximize growth with cost-efficient solutions.",
       "We work with a wide range of industries, including manufacturing, real estate, education, and hospitality. Our expertise allows us to customize strategies based on industry trends and business needs.",
       "Results depend on the scope of work, but many clients see noticeable improvements within 3-6 months. Sales optimizations and automation often provide quicker ROI, while branding and digital marketing strategies build long-term success.",
       "Absolutely! We offer continuous support and consulting to help businesses sustain and scale their growth over time. Our team remains a strategic partner, assisting with evolving business challenges and new opportunities.",

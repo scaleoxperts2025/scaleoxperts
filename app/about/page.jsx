@@ -22,16 +22,29 @@ const ServiceCard = ({ title, description, icon }) => (
   </div>
 );
 
-const ProcessStep = ({ number, title, description }) => (
-  <div className="flex flex-col sm:flex-row items-center sm:items-start mb-8">
-    <div className="flex-shrink-0 w-10 h-10 sm:w-12 sm:h-12 bg-orange-500 text-white rounded-full flex items-center justify-center text-lg sm:text-xl font-bold mb-4 sm:mb-0 sm:mr-4 font-poppins">
-      {number}
-    </div>
-    <div className="text-center sm:text-left">
-      <h3 className="text-lg sm:text-xl font-semibold text-gray-800 mb-2 font-poppins">
-        {title}
-      </h3>
-      <p className="text-sm sm:text-base text-gray-600 font-inter">{description}</p>
+const ProcessStep = ({ number, title, description, image }) => (
+  <div className="group relative overflow-hidden rounded-2xl bg-[#fcfcfc] transition-all border duration-300 hover:shadow-lg">
+    <div className="flex flex-col items-center p-8 md:flex-row">
+      <div className="relative mb-6 md:mb-0 md:mr-8 w-full md:w-auto">
+        {/* <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-orange-400 to-amber-500 opacity-20 blur-xl"></div> */}
+        <img
+          src={image}
+          alt={title}
+          className="relative w-full h-auto md:h-48 md:w-48 rounded-2xl object-cover transition-transform duration-300 group-hover:scale-105"
+        />
+      </div>
+
+      <div className="flex-1">
+        <div className="mb-4 flex items-center">
+          <div className="flex h-9 w-9 lg:h-12 lg:w-12 items-center justify-center rounded-full bg-gradient-to-br from-orange-500 to-amber-600 text-xl font-bold text-white">
+            {number}
+          </div>
+          <h3 className="ml-4 font-poppins text-2xl font-bold text-gray-800">
+            {title}
+          </h3>
+        </div>
+        <p className="font-inter text-gray-600">{description}</p>
+      </div>
     </div>
   </div>
 );
@@ -90,34 +103,41 @@ const AboutPage = () => {
           </div>
         </div>
 
-        <div className="mb-24 bg-white rounded-lg shadow-lg p-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center font-poppins">
-            Our Process
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <ProcessStep
-              number="1"
-              title="Discover"
-              description="We start by understanding your business, market trends, competitors, and customer behavior to identify growth opportunities."
-            />
-            <ProcessStep
-              number="2"
-              title="Strategize"
-              description="Next, we develop a customized action plan aligned with your business objectives, ensuring a high return on investment."
-            />
-            <ProcessStep
-              number="3"
-              title="Execute"
-              description="Unlike traditional consultants, we go beyond recommendations – our team actively works with you to implement strategies for sales, branding, and automation."
-            />
-            <ProcessStep
-              number="4"
-              title="Optimize"
-              description="We continuously monitor results, fine-tune strategies, and ensure maximum impact by leveraging data-driven insights."
-            />
+        <div className="bg-gradient-to-b from-gray-50 to-white py-24 px-4">
+          <div className="mx-auto max-w-7xl">
+            <h2 className="mb-20 text-center font-poppins text-4xl font-bold text-gray-900">
+              Our Strategic Process
+              <div className="mx-auto mt-4 h-1 w-24 bg-gradient-to-r from-orange-500 to-amber-400"></div>
+            </h2>
+
+            <div className="space-y-10">
+              <ProcessStep
+                number="1"
+                title="Discovery Phase"
+                description="Deep market analysis and customer journey mapping"
+                image="https://images.pexels.com/photos/590041/pexels-photo-590041.jpeg"
+              />
+              <ProcessStep
+                number="2"
+                title="Strategy Development"
+                description="Data-driven roadmaps aligned with business objectives"
+                image="https://images.unsplash.com/photo-1552664730-d307ca884978"
+              />
+              <ProcessStep
+                number="3"
+                title="Execution Engine"
+                description="Full-spectrum implementation with progress tracking"
+                image="https://images.unsplash.com/photo-1518773553398-650c184e0bb3"
+              />
+              <ProcessStep
+                number="4"
+                title="Optimization Cycle"
+                description="Continuous improvement through AI-powered analytics"
+                image="https://images.pexels.com/photos/669615/pexels-photo-669615.jpeg"
+              />
+            </div>
           </div>
         </div>
-
         <div className="mb-24">
           <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center font-poppins">
             Vision & Mission

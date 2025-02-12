@@ -11,7 +11,7 @@ const NavBar = () => {
   const router = useRouter();
 
   const redirect = () => {
-    window.open("https://cal.com/scaleoxperts-zmmvor/30min", "_blank");
+    router.push('/?scroll=contactus');
   };
 
   const navItems = [

@@ -22,20 +22,19 @@ const clients = [
 
 const ClientCard = ({ name, logo, description }) => (
   <div className="flex flex-col items-center justify-center p-6 bg-white rounded-lg shadow-lg transform transition duration-500 ease-in-out hover:scale-105 hover:shadow-xl">
-    <div className="relative w-32 h-32 mb-4 overflow-hidden rounded-xl">
-      <Image
-        src={logo}
-        alt={`${name} logo`}
-        layout="fill"
-        objectFit="cover"
-        className=""
-      />
+    <div className="relative w-full h-[9.1rem] mb-4 rounded-xl">
+      <div className="absolute inset-0 flex items-center justify-center p-4">
+        <img
+          src={logo}
+          alt={`${name} logo`}
+          className="w-full h-full object-contain max-h-full max-w-full"
+        />
+      </div>
     </div>
     <h3 className="text-xl font-semibold text-gray-800 text-center mb-2">{name}</h3>
     <p className="text-sm text-gray-600 text-center">{description}</p>
   </div>
 );
-
 const ClientsPage = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-orange-50 to-orange-100">

@@ -170,14 +170,14 @@ const ReviewChild = ({ name, position, quote, image }) => {
   return (
     <div className="child w-full rounded-3xl bg-[#f4f4f4] p-8 pb-8 mb-6 shadow-lg">
       <div className="flex">
-        <Image
+        {/* <Image
           src={image}
           width={40}
           height={40}
           className="rounded-full"
           alt={name}
-        />
-        <div className="flex flex-col ml-4">
+        /> */}
+        <div className="flex flex-col">
           <h2 className="font-semibold text-gray-800">{name}</h2>
           <h3 className="text-sm text-gray-600">{position}</h3>
         </div>
