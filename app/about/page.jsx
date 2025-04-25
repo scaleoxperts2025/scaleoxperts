@@ -3,6 +3,11 @@ import Image from "next/image";
 import NavBar from "../../components/NavBar/NavBar";
 import Footer from "../../components/Footer/Footer";
 
+export const metadata = {
+  title: 'About Us | ScaleOXperts',
+  description: 'Learn about ScaleOXperts and how we empower MSMEs and startups.',
+};
+
 const AboutSection = ({ title, content }) => (
   <div className="mb-16 ">
     <h2 className="text-3xl font-bold text-gray-800 mb-4 font-poppins">
