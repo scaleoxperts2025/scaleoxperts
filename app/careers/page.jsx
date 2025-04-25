@@ -1,4 +1,3 @@
-"use client";
 import React from "react";
 import NavBar from "@/components/NavBar/NavBar";
 import {
@@ -11,6 +10,11 @@ import {
   RiScales3Line,
   RiLightbulbLine,
 } from "react-icons/ri";
+
+export const metadata = {
+  title: 'Careers | ScaleOXperts',
+  description: 'Learn about ScaleOXperts and how we empower MSMEs and startups.',
+};
 
 const CareersPage = () => {
   return (

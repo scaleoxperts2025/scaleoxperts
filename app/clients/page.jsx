@@ -3,6 +3,11 @@ import Image from 'next/image';
 import NavBar from '../../components/NavBar/NavBar';
 import Footer from '../../components/Footer/Footer';
 
+export const metadata = {
+  title: 'Clients | ScaleOXperts',
+  description: 'Learn about ScaleOXperts and how we empower MSMEs and startups.',
+};
+
 const clients = [
   { name: 'F3 FastFood', logo: '/logo1.webp', description: 'Quick-service restaurant offering delicious and affordable fast food.' },
   { name: 'GreenChain', logo: '/logo2.webp', description: 'Serving fresh, organic, and authentic cuisine.' },

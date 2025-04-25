@@ -104,6 +104,10 @@ const PageContent = () => {
     }
   }, [scrollTo]);
 
+  useEffect(() => {
+    document.title = "Our Services | Scaleoxperts";
+  }, []);
+
   return (
     <div className="min-h-screen pb-[2rem] bg-white relative overflow-hidden">
       <div className="max-w-[88rem] -z-10 mx-auto">
