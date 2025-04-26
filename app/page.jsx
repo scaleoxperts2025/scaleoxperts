@@ -355,7 +355,7 @@ function HomeContent() {
               {
                 name: "Vishnu S",
                 role: "Business Associate",
-                image: "/varun.jpg",
+                image: "/vishnu.jpg",
               },
               {
                 name: "Surya E",
