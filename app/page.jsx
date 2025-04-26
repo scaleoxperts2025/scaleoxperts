@@ -355,7 +355,7 @@ function HomeContent() {
               {
                 name: "Ashok Reddy",
                 role: "Business Associate",
-                image: "/ashok.webp",
+                image: "/ashok.jpg",
               },
               {
                 name: "Surya E",
