@@ -353,7 +353,7 @@ function HomeContent() {
                 image: "/srin.webp",
               },
               {
-                name: "Varun S",
+                name: "Vishnu S",
                 role: "Business Associate",
                 image: "/varun.jpg",
               },
