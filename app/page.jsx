@@ -353,9 +353,9 @@ function HomeContent() {
                 image: "/srin.webp",
               },
               {
-                name: "Ashok Reddy",
+                name: "Varun S",
                 role: "Business Associate",
-                image: "/ashok.jpg",
+                image: "/varun.jpg",
               },
               {
                 name: "Surya E",
