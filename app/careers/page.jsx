@@ -12,8 +12,15 @@ import {
 } from "react-icons/ri";
 
 export const metadata = {
-  title: 'Careers | ScaleOXperts',
-  description: 'Learn about ScaleOXperts and how we empower MSMEs and startups.',
+  title: "ScaleOXperts Hiring | Careers in Sales Consulting & Digital Marketing",
+  description:
+    "Discover career paths in digital marketing services, growth strategy, and consultancy sales at ScaleOXperts. Be part of a dynamic digital marketing company.",
+  keywords: [
+    "digital marketing career",
+    "career in sales",
+    "digital marketing careers",
+    "scaleoxperts",
+  ],
 };
 
 const CareersPage = () => {

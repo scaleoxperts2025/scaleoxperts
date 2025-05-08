@@ -4,8 +4,16 @@ import NavBar from "../../components/NavBar/NavBar";
 import Footer from "../../components/Footer/Footer";
 
 export const metadata = {
-  title: 'About Us | ScaleOXperts',
-  description: 'Learn about ScaleOXperts and how we empower MSMEs and startups.',
+  title: "About ScaleoXperts | Best Digital Marketing Agency & Growth Strategists",
+  description:
+    "Discover how our digital marketing agency empowers startup businesses through sales consulting, digital marketing services, and strategy and consulting expertise.",
+  keywords: [
+    "scaleoxperts",
+    "digital marketing agency",
+    "digital marketing services",
+    "sales consulting",
+    "strategy consulting",
+  ],
 };
 
 const AboutSection = ({ title, content }) => (
