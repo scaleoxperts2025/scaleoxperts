@@ -3,9 +3,17 @@ import Image from 'next/image';
 import NavBar from '../../components/NavBar/NavBar';
 import Footer from '../../components/Footer/Footer';
 
+
 export const metadata = {
-  title: 'Clients | ScaleOXperts',
-  description: 'Learn about ScaleOXperts and how we empower MSMEs and startups.',
+  title: "ScaleoXperts Clients | Digital Marketing & Growth Success Stories",
+  description:
+    "Clients choose ScaleoXperts for digital marketing consulting, strategy consulting, and sales growth. See why we rank among the best digital marketing companies.",
+  keywords: [
+    "scaleoxperts",
+    "digital marketing consulting",
+    "strategy consulting",
+    "digital marketing company",
+  ],
 };
 
 const clients = [

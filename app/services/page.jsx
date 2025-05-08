@@ -5,6 +5,7 @@ import NavBar from "@/components/NavBar/NavBar";
 import Footer from "@/components/Footer/Footer";
 import Image from "next/image";
 
+
 const categories = [
   {
     title: "Sales & Business Growth Strategies",
@@ -104,9 +105,7 @@ const PageContent = () => {
     }
   }, [scrollTo]);
 
-  useEffect(() => {
-    document.title = "Our Services | Scaleoxperts";
-  }, []);
+  
 
   return (
     <div className="min-h-screen pb-[2rem] bg-white relative overflow-hidden">
