@@ -4,17 +4,26 @@ import NavBar from '../../components/NavBar/NavBar';
 import Footer from '../../components/Footer/Footer';
 
 
-export const metadata = {
-  title: "ScaleoXperts Clients | Digital Marketing & Growth Success Stories",
-  description:
-    "Clients choose ScaleoXperts for digital marketing consulting, strategy consulting, and sales growth. See why we rank among the best digital marketing companies.",
-  keywords: [
-    "scaleoxperts",
-    "digital marketing consulting",
-    "strategy consulting",
-    "digital marketing company",
-  ],
-};
+export async function generateMetadata() {
+  return {
+    title: "ScaleoXperts Clients | Digital Marketing & Growth Success Stories",
+    description:
+      "Clients choose ScaleoXperts for digital marketing consulting, strategy consulting, and sales growth. See why we rank among the best digital marketing companies.",
+    keywords: [
+      "scaleoxperts",
+      "digital marketing consulting",
+      "strategy consulting",
+      "digital marketing company",
+    ],
+    other: {
+      "link:canonical": "https://www.scaleoxperts.com/clients"
+    }
+  };
+
+
+}
+
+
 
 const clients = [
   { name: 'F3 FastFood', logo: '/logo1.webp', description: 'Quick-service restaurant offering delicious and affordable fast food.' },
@@ -64,7 +73,7 @@ const ClientsPage = () => {
       </main>
       <div className='bg-white'>
         <div className='max-w-[84rem] mx-auto'>
-            <Footer />
+          <Footer />
         </div>
       </div>
     </div>

@@ -11,17 +11,22 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export const metadata = {
-  title: "ScaleoXperts | Digital Marketing Agency | Growth Strategy Experts",
-  description:
-    "ScaleoXperts provides tailored digital marketing services, sales consulting, and strategic growth solutions. Helping startups grow with 360° tailored solutions.",
-  keywords: [
-    "scaleoxperts",
-    "digital marketing services",
-    "sales consulting",
-    "growth strategy",
-  ],
-};
+export async function generateMetadata() {
+  return {
+    title: "ScaleoXperts | Digital Marketing Agency | Growth Strategy Experts",
+    description:
+      "ScaleoXperts provides tailored digital marketing services, sales consulting, and strategic growth solutions. Helping startups grow with 360° tailored solutions.",
+    keywords: [
+      "scaleoxperts",
+      "digital marketing services",
+      "sales consulting",
+      "growth strategy",
+    ],
+    other: {
+      "link:canonical": "https://www.scaleoxperts.com/",
+    },
+  };
+}
 
 export default function RootLayout({ children }) {
   return (

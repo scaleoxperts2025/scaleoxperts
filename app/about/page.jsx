@@ -3,18 +3,23 @@ import Image from "next/image";
 import NavBar from "../../components/NavBar/NavBar";
 import Footer from "../../components/Footer/Footer";
 
-export const metadata = {
-  title: "About ScaleoXperts | Best Digital Marketing Agency & Growth Strategists",
-  description:
-    "Discover how our digital marketing agency empowers startup businesses through sales consulting, digital marketing services, and strategy and consulting expertise.",
-  keywords: [
-    "scaleoxperts",
-    "digital marketing agency",
-    "digital marketing services",
-    "sales consulting",
-    "strategy consulting",
-  ],
-};
+export async function generateMetadata() {
+  return {
+    title: "About ScaleoXperts | Best Digital Marketing Agency & Growth Strategists",
+    description:
+      "Discover how our digital marketing agency empowers startup businesses through sales consulting, digital marketing services, and strategy and consulting expertise.",
+    keywords: [
+      "scaleoxperts",
+      "digital marketing agency",
+      "digital marketing services",
+      "sales consulting",
+      "strategy consulting",
+    ],
+    other: {
+      "link:canonical": "https://www.scaleoxperts.com/about"
+    }
+  };
+}
 
 const AboutSection = ({ title, content }) => (
   <div className="mb-16 ">

@@ -11,17 +11,22 @@ import {
   RiLightbulbLine,
 } from "react-icons/ri";
 
-export const metadata = {
-  title: "ScaleOXperts Hiring | Careers in Sales Consulting & Digital Marketing",
-  description:
-    "Discover career paths in digital marketing services, growth strategy, and consultancy sales at ScaleOXperts. Be part of a dynamic digital marketing company.",
-  keywords: [
-    "digital marketing career",
-    "career in sales",
-    "digital marketing careers",
-    "scaleoxperts",
-  ],
-};
+export async function generateMetadata() {
+  return {
+    title: "ScaleOXperts Hiring | Careers in Sales Consulting & Digital Marketing",
+    description:
+      "Discover career paths in digital marketing services, growth strategy, and consultancy sales at ScaleOXperts. Be part of a dynamic digital marketing company.",
+    keywords: [
+      "digital marketing career",
+      "career in sales",
+      "digital marketing careers",
+      "scaleoxperts",
+    ],
+    other: {
+      "link:canonical": "https://www.scaleoxperts.com/careers"
+    }
+  };
+}
 
 const CareersPage = () => {
   return (

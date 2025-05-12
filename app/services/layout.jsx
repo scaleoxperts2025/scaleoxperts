@@ -1,5 +1,6 @@
 
-export const metadata = {
+export async function generateMetadata(){
+  return {
     title: "ScaleoXperts Services | Sales Consulting & Digital Marketing Solutions",
     description:
       "Digital marketing, strategy and growth consulting. ScaleoXperts offers expert services to help your business grow. Your best online marketing company. Start today!",
@@ -10,7 +11,11 @@ export const metadata = {
       "scaleoxperts",
       "best online marketing company",
     ],
-  };
+    other: {
+      "link:canonical": "https://www.scaleoxperts.com/services",
+    },
+  }
+};
   
   export default function ServicesLayout({ children }) {
     return <>{children}</>;
