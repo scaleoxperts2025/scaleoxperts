@@ -91,20 +91,12 @@ const categories = [
 ];
 
 const PageContent = () => {
-  const searchParams = useSearchParams();
-  const scrollTo = searchParams?.get("scroll");
-  const serviceRefs = useRef({});
 
+  const serviceRefs = useRef({});
+  
   const redirect = () => {
     window.open("https://cal.com/scaleoxperts-zmmvor/30min", "_blank");
   };
-
-  useEffect(() => {
-    if (scrollTo && serviceRefs.current[scrollTo]) {
-      serviceRefs.current[scrollTo].scrollIntoView({ behavior: "smooth" });
-    }
-  }, [scrollTo]);
-
   
 
   return (
