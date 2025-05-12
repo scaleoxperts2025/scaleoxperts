@@ -1,0 +1,30 @@
+User-agent: *
+Disallow:
+
+# Block unnecessary crawls (URL parameters or empty searches, if any)
+Disallow: /*?
+
+# Allow important pages
+Allow: /clients
+Allow: /services
+Allow: /about
+Allow: /careers
+
+# Sitemap
+Sitemap: https://scaleoxperts.com/sitemap.xml
+
+# Block AI/data scraping bots
+User-agent: GPTBot
+Disallow: /
+
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: DataForSeoBot
+Disallow: /
