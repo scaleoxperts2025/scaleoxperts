@@ -351,7 +351,7 @@ function HomeContent() {
                 image: "/images/team/gaurav.webp",
               },
               {
-                name: "Pritam Kumar",
+                name: "Dr. Pritam Kumar Das",
                 role: "Sr Strategy expert",
                 image: "/images/team/pritam-kumar.jpeg"
               },
