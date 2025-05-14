@@ -4,10 +4,10 @@ import Image from 'next/image';
 
 const Companies = () => {
   const companies = [
-    { name: 'F3 FastFood', logo: '/logo1.webp' },
-    { name: 'GreenChain', logo: '/logo2.webp' },
-    { name: 'HS Dental', logo: '/logo3.webp' },
-    { name: 'APAR Industries', logo: '/logo4.webp' },
+    { name: 'F3 FastFood', logo: '/images/logos/f3fastfood.webp' },
+    { name: 'GreenChain', logo: '/images/logos/greenasianrestaurant.webp' },
+    { name: 'HS Dental', logo: '/images/logos/logo3.webp' },
+    { name: 'APAR Industries', logo: '/images/logos/aparindustries.webp' },
     { name: 'Sandy Foods', logo: '/logo5.webp' },
     { name: 'SteelX Industries', logo: '/steel.webp' },
     { name: 'SteelWave Industries', logo: '/steel2.webp' },

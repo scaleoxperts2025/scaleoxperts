@@ -337,7 +337,7 @@ function HomeContent() {
               {
                 name: "Mohd Sameer",
                 role: "Co-Founder & Head of Operations",
-                image: "/mohd.webp",
+                image: "/images/team/mohd.webp",
               },
               {
                 name: "Nousheen Fatima",
@@ -348,44 +348,42 @@ function HomeContent() {
               {
                 name: "Gaurav Kumar",
                 role: "Senior Strategy Expert",
-                image: "/gaurav.webp",
+                image: "/images/team/gaurav.webp",
               },
               {
                 name: "Srinihith",
                 role: "Strategy Expert",
-                image: "/srin.webp",
+                image: "/images/team/srin.webp",
               },
               {
                 name: "Vishnu S",
                 role: "Business Associate",
-                image: "/vishnu.jpg",
+                image: "/images/team/vishnu.jpg",
               },
               {
                 name: "Surya E",
                 role: "Business Associate",
-                image: "/surya.webp",
+                image: "/images/team/surya.webp",
               },
               {
                 name: "Kotla Rahul",
                 role: "Business Associate",
-                image: "/kotla.webp",
+                image: "/images/team/kotla.webp",
               },
               {
-                name: "M. Sandeep",
+                name: "Iqra",
                 role: "Digital Marketing Associate",
-                image: "/sandeep.webp",
+                image: "/images/team/iqra.png",
               },
               {
                 name: "P Veera Sai",
                 role: "Marketing Associate",
-                image:
-                  "/veer.webp",
+                image: "/images/team/veer.webp",
               },
               {
-                name: "Avinasha",
+                name: "k.Pavani",
                 role: "HR Associate",
-                image:
-                  "https://icon-library.com/images/female-user-icon/female-user-icon-8.jpg",
+                image:"/images/team/pavani.jpg",
               },
             ].map((member, index) => (
               <div key={index} className="flex flex-col group">

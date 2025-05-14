@@ -7,7 +7,7 @@ const people = [
     name: "Mohd Sameer",
     designation: "Co-Founder & Head of Operations",
     image:
-      "/mohd.webp",
+      "/images/team/mohd.webp",
   },
   {
     id: 2,
@@ -20,8 +20,7 @@ const people = [
     id: 3,
     name: "Gaurav Kumar",
     designation: "Senior Strategy Expert",
-    image:
-      "/gaurav.webp",
+    image:"/images/team/gaurav.webp",
   },
 //   {
 //     id: 4,
