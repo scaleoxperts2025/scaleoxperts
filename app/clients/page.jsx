@@ -26,20 +26,20 @@ export async function generateMetadata() {
 
 
 const clients = [
-  { name: 'F3 FastFood', logo: '/logo1.webp', description: 'Quick-service restaurant offering delicious and affordable fast food.' },
-  { name: 'GreenChain', logo: '/logo2.webp', description: 'Serving fresh, organic, and authentic cuisine.' },
-  { name: 'HS Dental', logo: '/logo3.webp', description: 'Advanced dental care services for healthy and beautiful smiles.' },
-  { name: 'APAR Industries', logo: '/logo4.webp', description: 'Manufacturer of industrial components and engineering solutions.' },
-  { name: 'Sandy Foods', logo: '/logo5.webp', description: 'Supplier of high-quality frozen food products.' },
-  { name: 'SteelX Industries', logo: '/steel.webp', description: 'Leading provider of steel fabrication and industrial solutions.' },
-  { name: 'Funkiezz Clothing Co.', logo: '/fun.webp', description: 'Trendy streetwear brand for bold and unique fashion.' },
-  { name: 'SmartWonders Educational Institutions', logo: '/smart.webp', description: 'Providing quality education with a modern learning approach.' },
-  { name: 'Vishwakarma Manufacturing Co.', logo: '/vish.webp', description: 'Precision manufacturing for industrial and engineering needs.' },
-  { name: 'SteelWave Industries', logo: '/steel2.webp', description: 'Heavy steel fabrication and industrial structures.' },
-  { name: 'MGR Builders & Developers', logo: '/mgr.webp', description: 'Experts in infrastructure and property development.' },
-  { name: 'NKS Food Products', logo: '/nx.webp', description: 'Supplier of premium packaged and processed food products.' },
-  { name: 'Prime Auto Components', logo: '/pime.webp', description: 'Manufacturer of high-quality automotive parts and accessories.' },
-  { name: 'Divija Builders', logo: '/divija.webp', description: 'Real estate developers specializing in residential and commercial projects.' },
+  { name: 'F3 FastFood', logo: '/images/logos/f3fastfood.webp', description: 'Quick-service restaurant offering delicious and affordable fast food.' },
+  { name: 'GreenChain', logo: '/images/logos/greenasianrestaurant.webp', description: 'Serving fresh, organic, and authentic cuisine.' },
+  { name: 'HS Dental', logo: '/images/logos/dentalclinic.webp', description: 'Advanced dental care services for healthy and beautiful smiles.' },
+  { name: 'APAR Industries', logo: '/images/logos/aparindustries.webp', description: 'Manufacturer of industrial components and engineering solutions.' },
+  { name: 'Sandy Foods', logo: '/images/logos/sandyfoods.webp', description: 'Supplier of high-quality frozen food products.' },
+  { name: 'SteelX Industries', logo: '/images/logos/steelx.webp', description: 'Leading provider of steel fabrication and industrial solutions.' },
+  { name: 'Funkiezz Clothing Co.', logo: '/images/logos/funkieez.webp', description: 'Trendy streetwear brand for bold and unique fashion.' },
+  { name: 'SmartWonders Educational Institutions', logo: '/images/logos/smartwondersedu.webp', description: 'Providing quality education with a modern learning approach.' },
+  { name: 'Vishwakarma Manufacturing Co.', logo: '/images/logos/vishwakarma.webp', description: 'Precision manufacturing for industrial and engineering needs.' },
+  { name: 'SteelWave Industries', logo: '/images/logos/steelwave.webp', description: 'Heavy steel fabrication and industrial structures.' },
+  { name: 'MGR Builders & Developers', logo: '/images/logos/mgrbuilders.webp', description: 'Experts in infrastructure and property development.' },
+  { name: 'NKS Food Products', logo: '/images/logos/nksfood.webp', description: 'Supplier of premium packaged and processed food products.' },
+  { name: 'Prime Auto Components', logo: '/images/logos/pime.webp', description: 'Manufacturer of high-quality automotive parts and accessories.' },
+  { name: 'Divija Builders', logo: '/images/logos/divijabuilders.webp', description: 'Real estate developers specializing in residential and commercial projects.' },
 ];
 
 const ClientCard = ({ name, logo, description }) => (
