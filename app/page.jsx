@@ -337,7 +337,7 @@ function HomeContent() {
               {
                 name: "Mohd Sameer",
                 role: "Co-Founder & Head of Operations",
-                image: "/images/team/mohd.webp",
+                image: "/images/team/mohd.jpeg",
               },
               {
                 name: "Nousheen Fatima",
@@ -351,9 +351,9 @@ function HomeContent() {
                 image: "/images/team/gaurav.webp",
               },
               {
-                name: "Srinihith",
-                role: "Strategy Expert",
-                image: "/images/team/srin.webp",
+                name: "Pritam Kumar",
+                role: "Sr Strategy expert",
+                image: "/images/team/pritam-kumar.jpeg"
               },
               {
                 name: "Vishnu S",
@@ -366,9 +366,9 @@ function HomeContent() {
                 image: "/images/team/surya.webp",
               },
               {
-                name: "Kotla Rahul",
-                role: "Business Associate",
-                image: "/images/team/kotla.webp",
+                name: "Srinihith",
+                role: "Strategy Expert",
+                image: "/images/team/srin.webp",
               },
               {
                 name: "Iqra",
@@ -385,6 +385,7 @@ function HomeContent() {
                 role: "HR Associate",
                 image:"/images/team/pavani.jpg",
               },
+
             ].map((member, index) => (
               <div key={index} className="flex flex-col group">
                 <div className="w-full aspect-square mb-4 overflow-hidden rounded-[0.4rem] border border-[#e3e3e3]">
