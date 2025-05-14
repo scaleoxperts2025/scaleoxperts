@@ -11,11 +11,12 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+
 export async function generateMetadata() {
   return {
-    title: "ScaleoXperts | Digital Marketing Agency | Growth Strategy Experts",
+    title: "ScaleOXperts | Strategy & Management Consulting for MSMEs | Branding, Digital Transformation & Business Advisory",
     description:
-      "ScaleoXperts provides tailored digital marketing services, sales consulting, and strategic growth solutions. Helping startups grow with 360° tailored solutions.",
+      "ScaleOXperts is a strategy and management consulting firm that empowers MSMEs with expert business planning, branding, digital transformation, and advisory services. Trusted by startups and SMEs across India.",
     keywords: [
       "scaleoxperts",
       "digital marketing services",
