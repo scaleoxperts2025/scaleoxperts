@@ -7,7 +7,7 @@ const people = [
     name: "Mohd Sameer",
     designation: "Co-Founder & Head of Operations",
     image:
-      "/images/team/mohd.webp",
+      "/images/team/mohd.jpeg",
   },
   {
     id: 2,
