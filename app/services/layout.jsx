@@ -12,7 +12,7 @@ export async function generateMetadata(){
       "best online marketing company",
     ],
     other: {
-      "link:canonical": "https://www.scaleoxperts.com/services",
+      "link:canonical": "https://scaleoxperts.com/services",
     },
   }
 };

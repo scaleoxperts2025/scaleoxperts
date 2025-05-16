@@ -24,7 +24,7 @@ export async function generateMetadata() {
       "growth strategy",
     ],
     other: {
-      "link:canonical": "https://www.scaleoxperts.com/",
+      "link:canonical": "https://scaleoxperts.com/",
     },
   };
 }

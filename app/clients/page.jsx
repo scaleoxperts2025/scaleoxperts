@@ -16,7 +16,7 @@ export async function generateMetadata() {
       "digital marketing company",
     ],
     other: {
-      "link:canonical": "https://www.scaleoxperts.com/clients"
+      "link:canonical": "https://scaleoxperts.com/clients"
     }
   };
 

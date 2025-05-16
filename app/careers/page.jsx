@@ -23,7 +23,7 @@ export async function generateMetadata() {
       "scaleoxperts",
     ],
     other: {
-      "link:canonical": "https://www.scaleoxperts.com/careers"
+      "link:canonical": "https://scaleoxperts.com/careers"
     }
   };
 }
