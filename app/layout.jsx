@@ -24,9 +24,9 @@ export async function generateMetadata() {
       "sales consulting",
       "growth strategy",
     ],
-    other: {
-      "link:canonical": "https://scaleoxperts.com/",
-    },
+    alternates: {
+      canonical: "https://scaleoxperts.com/",
+    }
   };
 }
 

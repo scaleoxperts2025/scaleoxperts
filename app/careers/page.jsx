@@ -22,8 +22,8 @@ export async function generateMetadata() {
       "digital marketing careers",
       "scaleoxperts",
     ],
-    other: {
-      "link:canonical": "https://scaleoxperts.com/careers"
+    alternates: {
+      canonical: "https://scaleoxperts.com/careers"
     }
   };
 }
