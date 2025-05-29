@@ -6,14 +6,15 @@ import Footer from '../../components/Footer/Footer';
 
 export async function generateMetadata() {
   return {
-    title: "ScaleoXperts Clients | Digital Marketing & Growth Success Stories",
+    title: "ScaleOXperts Clients | Strategy, Sales & Growth Consulting",
     description:
-      "Clients choose ScaleoXperts for digital marketing consulting, strategy consulting, and sales growth. See why we rank among the best digital marketing companies.",
+      "Discover how ScaleOXperts empowers clients with growth consultant expertise, go to market strategy, IT consulting services, and business process consulting.",
     keywords: [
-      "scaleoxperts",
-      "digital marketing consulting",
-      "strategy consulting",
-      "digital marketing company",
+      "Scaleoxperts", 
+      " growth consultant expertise", 
+      " go to market strategy", 
+      " IT consulting services", 
+      " business process consulting"
     ],
     alternates: {
       canonical: "https://scaleoxperts.com/clients"
