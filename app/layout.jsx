@@ -15,21 +15,22 @@ const geistMono = Geist_Mono({
 
 export async function generateMetadata() {
   return {
-    title: "ScaleOXperts | Strategy & Management Consulting for MSMEs | Branding, Digital Transformation & Business Advisory",
+    title: "ScaleOXperts | Business Consulting & Growth Strategy Firm",
     description:
-      "ScaleOXperts is a strategy and management consulting firm that empowers MSMEs with expert business planning, branding, digital transformation, and advisory services. Trusted by startups and SMEs across India.",
+      "ScaleOXperts provides strategy consulting, digital transformation consulting, and go-to-market strategy services to accelerate business growth. Book a call now!",
     keywords: [
-      "scaleoxperts",
-      "digital marketing services",
-      "sales consulting",
-      "growth strategy",
+      "Scaleoxperts",
+      " strategy consulting",
+      " digital transformation consulting",
+      " go-to-market strategy services",
+      " business consulting",
+      " growth strategy firm"
     ],
     alternates: {
       canonical: "https://scaleoxperts.com/",
     }
   };
 }
-
 
 
 export default function RootLayout({ children }) {

@@ -5,15 +5,15 @@ import Footer from "../../components/Footer/Footer";
 
 export async function generateMetadata() {
   return {
-    title: "About ScaleoXperts | Best Digital Marketing Agency & Growth Strategists",
+    title: "About ScaleOXperts | Growth Strategy & Consulting Firm",
     description:
-      "Discover how our digital marketing agency empowers startup businesses through sales consulting, digital marketing services, and strategy and consulting expertise.",
+      "Learn about ScaleOXperts—experts in sales consulting, business growth strategy, consultancy sales, and digital transformation consulting services.",
     keywords: [
-      "scaleoxperts",
-      "digital marketing agency",
-      "digital marketing services",
-      "sales consulting",
-      "strategy consulting",
+      "Scaleoxperts",
+      " sales consulting",
+      " business growth strategy",
+      " consultancy sales",
+      " digital transformation consulting services"
     ],
     alternates: {
       canonical: "https://scaleoxperts.com/about"

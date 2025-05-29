@@ -13,14 +13,14 @@ import {
 
 export async function generateMetadata() {
   return {
-    title: "ScaleOXperts Hiring | Careers in Sales Consulting & Digital Marketing",
+    title: "Work with ScaleOXperts | Growth Strategy & Consulting Jobs",
     description:
-      "Discover career paths in digital marketing services, growth strategy, and consultancy sales at ScaleOXperts. Be part of a dynamic digital marketing company.",
+      "Build your career with ScaleOXperts—offering growth strategy jobs, consulting jobs, sales consulting jobs, and business consulting jobs for driven professionals.",
     keywords: [
-      "digital marketing career",
-      "career in sales",
-      "digital marketing careers",
-      "scaleoxperts",
+      "Scaleoxperts",
+      " growth strategy jobs",
+      " consulting jobs",
+      " business consulting jobs"
     ],
     alternates: {
       canonical: "https://scaleoxperts.com/careers"

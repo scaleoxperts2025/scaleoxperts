@@ -1,15 +1,15 @@
 
 export async function generateMetadata(){
   return {
-    title: "ScaleoXperts Services | Sales Consulting & Digital Marketing Solutions",
+    title: "ScaleOXperts Clients | Strategy, Sales & Growth Consulting",
     description:
-      "Digital marketing, strategy and growth consulting. ScaleoXperts offers expert services to help your business grow. Your best online marketing company. Start today!",
+      "Discover how ScaleOXperts empowers clients with growth consultant expertise, go to market strategy, IT consulting services, and business process consulting.",
     keywords: [
-      "digital marketing consulting",
-      "strategy consulting",
-      "growth consulting",
-      "scaleoxperts",
-      "best online marketing company",
+      "Scaleoxperts",
+      " growth consultant expertise",
+      " go to market strategy",
+      " IT consulting services",
+      " business process consulting"
     ],
     alternates: {
       canonical: "https://scaleoxperts.com/services",
