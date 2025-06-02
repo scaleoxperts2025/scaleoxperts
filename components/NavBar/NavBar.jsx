@@ -1,7 +1,7 @@
 'use client'
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
-import { useRouter} from 'next/navigation';
+import { useRouter } from 'next/navigation';
 import { FiMenu, FiX } from "react-icons/fi";
 import { RiArrowDownSLine } from "react-icons/ri";
 
@@ -15,34 +15,23 @@ const NavBar = () => {
   };
 
   const navItems = [
-    { name: "Home", route: "/" },
-    { name: "About", route: "/about" },
-    { name: "Services", route: "/services" },
-    { 
-      name: "Insights", 
+    { name: "Home", route: "https://scaleoxperts.com/" },
+    { name: "About", route: "https://scaleoxperts.com/about" },
+    { name: "Services", route: "https://scaleoxperts.com/services" },
+    {
+      name: "Insights",
       subitems: [
         { name: "Blog", route: "https://blog.scaleoxperts.com" },
-        { name: "Clients", route: "/clients" }
+        { name: "Clients", route: "https://scaleoxperts.com/clients" }
       ]
     },
-    { name: "Careers", route: "/careers" },
+    { name: "Careers", route: "https://scaleoxperts.com/careers" }
   ];
 
   const handleNavigation = (route, e) => {
     e.preventDefault();
     setIsOpen(false);
-
-    if (route === '/') {
-      router.push('/');
-    } else if (route === '/?scroll=aboutus') {
-      router.push('/?scroll=aboutus');
-    } else if (route === '/services') {
-      router.push('/services');
-    } else if (route.startsWith('http')) {
-      window.open(route, '_blank');
-    } else {
-      router.push(route);
-    }
+    window.open(route, '_self');
   };
 
   useEffect(() => {
@@ -59,8 +48,8 @@ const NavBar = () => {
 
   return (
     <nav className="flex max-w-[77rem] mx-auto items-center justify-between pt-6 text-white px-4 sm:px-6">
-      <Link
-        href="/"
+      <a
+        href="https://scaleoxperts.com/"
         className="flex flex-col items-start cursor-pointer transition-all duration-300 hover:scale-105"
       >
         <div className="flex items-center space-x-2">
@@ -76,9 +65,8 @@ const NavBar = () => {
         <span className="text-[#666666ad] text-xs font-inter mt-0.5">
           ISO 9001-2015 certified consulting org
         </span>
-      </Link>
+      </a>
 
-      {/* Desktop Navigation */}
       <ul className="hidden lg:flex space-x-8">
         {navItems.map((item) => (
           <li key={item.name} className="relative group">
@@ -91,8 +79,6 @@ const NavBar = () => {
                 {item.name}
                 <RiArrowDownSLine className="ml-1 transition-transform duration-300 group-hover:rotate-180" />
                 <span className="absolute left-0 right-0 bottom-[-1px] h-[1.3px] bg-[#282828] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
-                
-                {/* Dropdown */}
                 <div className={`absolute top-full left-0 mt-2 w-48 bg-white shadow-lg rounded-md overflow-hidden transition-all duration-300 ease-in-out z-50 ${isInsightsOpen ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible -translate-y-2'}`}>
                   {item.subitems.map((subitem) => (
                     <a
@@ -120,7 +106,6 @@ const NavBar = () => {
         ))}
       </ul>
 
-      {/* Mobile Menu Button and Contact */}
       <div className="hidden lg:flex">
         <button
           onClick={redirect}
@@ -129,6 +114,7 @@ const NavBar = () => {
           Contact Us
         </button>
       </div>
+
       <div className="flex lg:hidden items-center gap-4">
         <button
           onClick={() => setIsOpen(!isOpen)}
@@ -140,7 +126,6 @@ const NavBar = () => {
         </button>
       </div>
 
-      {/* Mobile Menu Overlay */}
       <div
         className={`fixed inset-0 z-50 bg-black/50 transition-opacity duration-300 ${
           isOpen ? "opacity-100 visible" : "opacity-0 invisible"
@@ -148,7 +133,6 @@ const NavBar = () => {
         onClick={() => setIsOpen(false)}
       />
 
-      {/* Mobile Sidebar */}
       <div
         className={`fixed top-0 right-0 z-50 h-full w-3/4 bg-[#f4f2f0] transform transition-transform duration-300 ease-in-out ${
           isOpen ? "translate-x-0" : "translate-x-full"
@@ -212,7 +196,6 @@ const NavBar = () => {
             </ul>
 
             <button
-              
               className="w-full py-3 text-center rounded-full text-white bg-[#ff8d1a] hover:bg-[#fe9328] transition-all duration-300 block text-lg mt-8"
               onClick={redirect}
             >
