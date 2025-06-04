@@ -1,22 +1,24 @@
 
-export async function generateMetadata(){
+export async function generateMetadata() {
   return {
-    title: "ScaleOXperts Clients | Strategy, Sales & Growth Consulting",
+    title: "ScaleOXperts | Business Growth and Consulting Services",
     description:
-      "Discover how ScaleOXperts empowers clients with growth consultant expertise, go to market strategy, IT consulting services, and business process consulting.",
+      "Discover business growth strategy, IT consulting services, marketing and growth strategy, and consultancy sales with ScaleOXperts’ expert team. Book free consultation.",
     keywords: [
-      "Scaleoxperts",
-      " growth consultant expertise",
-      " go to market strategy",
+      "ScaleOXperts",
+      " business growth services",
+      " business consulting services",
+      " business growth strategy",
       " IT consulting services",
-      " business process consulting"
+      " marketing and growth strategy",
+      " consultancy sales"
     ],
     alternates: {
       canonical: "https://scaleoxperts.com/services",
     },
   }
 };
-  
-  export default function ServicesLayout({ children }) {
-    return <>{children}</>;
-  }
+
+export default function ServicesLayout({ children }) {
+  return <>{children}</>;
+}
