@@ -1,0 +1,47 @@
+[
+    {
+      "number": 1,
+      "title": "Discovery Phase",
+      "description": "Full-funnel audit & revenue leakage analysis",
+      "items": [
+        "Growth opportunity matrix",
+        "Industry benchmarking & KPI mapping",
+        "Customer journey analysis"
+      ],
+      "image": "https://images.pexels.com/photos/590041/pexels-photo-590041.jpeg"
+    },
+    {
+      "number": 2,
+      "title": "Strategy Development",
+      "description": "Data-driven roadmaps aligned with business objectives",
+      "items": [
+        "90-day quick wins + 12-month growth blueprint",
+        "Custom dashboards, ROI-focused planning",
+        "Implementation roadmap"
+      ],
+      "image": "https://images.unsplash.com/photo-1552664730-d307ca884978"
+    },
+    {
+      "number": 3,
+      "title": "Execution Engine",
+      "description": "Full-spectrum implementation with progress tracking",
+      "items": [
+        "Hands-on implementation",
+        "Team upskilling & process documentation",
+        "Change management & tech onboarding"
+      ],
+      "image": "https://images.unsplash.com/photo-1518773553398-650c184e0bb3"
+    },
+    {
+      "number": 4,
+      "title": "Optimization Cycle",
+      "description": "Continuous improvement through AI-powered analytics",
+      "items": [
+        "Monthly/quarterly reviews",
+        "Real-time data monitoring",
+        "A/B testing & strategic pivots"
+      ],
+      "image": "https://images.pexels.com/photos/669615/pexels-photo-669615.jpeg"
+    }
+  ]
+  

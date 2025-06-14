@@ -1,0 +1,41 @@
+[
+    {
+      "title": "Sales & Business Growth",
+      "description": "Align your teams. Optimize your pipeline. Increase revenue.",
+      "icon": "📈",
+      "items": [
+        "Revenue architecture & pipeline design",
+        "CRM automation & lead scoring",
+        "Sales team performance optimization",
+        "Outbound marketing & multi-touch funnels",
+        "Lead generation systems with attribution tracking"
+      ],
+      "impact": "Avg +60% lead gen | Avg +50% e-commerce revenue"
+    },
+    {
+      "title": "Digital Marketing & Branding",
+      "description": "Dominate your niche through visibility and precision.",
+      "icon": "🎨",
+      "items": [
+        "SEO & content marketing",
+        "Social media strategy & growth",
+        "PPC campaigns & A/B optimization",
+        "Brand identity & messaging architecture",
+        "Thought leadership & PR"
+      ],
+      "impact": "Startup Brands India achieved phenomenal ROI on ad spend | Creative Solutions geographically revamped brand positioning"
+    },
+    {
+      "title": "Business Automation & Digital Transformation",
+      "description": "Eliminate inefficiencies. Accelerate workflows.",
+      "icon": "⚙️",
+      "items": [
+        "AI-powered automation & dashboards",
+        "CRM and lead nurturing systems",
+        "Marketing automation & performance reporting",
+        "Tech stack integration & optimization"
+      ],
+      "impact": "+30% sales from AI analytics at Tech Frontiers Hyderabad | Seamless CX at Logistics Pro India"
+    }
+  ]
+  

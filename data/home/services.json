@@ -1,0 +1,57 @@
+[
+    {
+      "title": "Sales & Business Growth",
+      "shortName": "sales",
+      "description": "Boost revenue with proven sales strategies, lead generation, and CRM automation.",
+      "icon": "📈"
+    },
+    {
+      "title": "Digital Marketing & Branding",
+      "shortName": "marketing",
+      "description": "Enhance brand visibility with SEO, social media marketing, and paid ad campaigns.",
+      "icon": "🌐"
+    },
+    {
+      "title": "Business Automation",
+      "shortName": "automation",
+      "description": "Streamline operations with AI-driven automation, CRM solutions, and process optimization.",
+      "icon": "🤖"
+    },
+    {
+      "title": "Startup Scaling Solutions",
+      "shortName": "startup",
+      "description": "Develop go-to-market strategies, optimize pricing, and secure funding for business growth.",
+      "icon": "🚀"
+    },
+    {
+      "title": "Market Research & Strategy",
+      "shortName": "research",
+      "description": "Leverage data-driven insights to analyze competitors and craft winning business strategies.",
+      "icon": "📊"
+    },
+    {
+      "title": "Lead Generation & Outreach",
+      "shortName": "leads",
+      "description": "Maximize conversions with targeted cold emails, outbound marketing, and sales funnel optimization.",
+      "icon": "📩"
+    },
+    {
+      "title": "Bookkeeping & Accounting",
+      "shortName": "accounting",
+      "description": "Providing accurate, hassle-free financial management to streamline your business finances.",
+      "icon": "📚"
+    },
+    {
+      "title": "Virtual CFO Services",
+      "shortName": "cfo",
+      "description": "Offering strategic financial planning, insights, and analysis to drive your company's growth.",
+      "icon": "💼"
+    },
+    {
+      "title": "Website & App Development",
+      "shortName": "development",
+      "description": "Creating custom websites and apps through our network of skilled freelancers to enhance your digital presence.",
+      "icon": "💻"
+    }
+  ]
+  

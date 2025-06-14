@@ -14,18 +14,31 @@ const NavBar = () => {
     router.push('/?scroll=contactus');
   };
 
+  // const navItems = [
+  //   { name: "Home", route: "https://scaleoxperts.com/" },
+  //   { name: "About", route: "https://scaleoxperts.com/about" },
+  //   { name: "Services", route: "https://scaleoxperts.com/services" },
+  //   {
+  //     name: "Insights",
+  //     subitems: [
+  //       { name: "Blog", route: "https://blog.scaleoxperts.com" },
+  //       { name: "Clients", route: "https://scaleoxperts.com/clients" }
+  //     ]
+  //   },
+  //   { name: "Careers", route: "https://scaleoxperts.com/careers" }
+  // ];
   const navItems = [
-    { name: "Home", route: "https://scaleoxperts.com/" },
-    { name: "About", route: "https://scaleoxperts.com/about" },
-    { name: "Services", route: "https://scaleoxperts.com/services" },
+    { name: "Home", route: "/" },
+    { name: "About", route: "/about" },
+    { name: "Services", route: "/services" },
     {
       name: "Insights",
       subitems: [
         { name: "Blog", route: "https://blog.scaleoxperts.com" },
-        { name: "Clients", route: "https://scaleoxperts.com/clients" }
+        { name: "Clients", route: "/clients" }
       ]
     },
-    { name: "Careers", route: "https://scaleoxperts.com/careers" }
+    { name: "Careers", route: "/careers" }
   ];
 
   const handleNavigation = (route, e) => {

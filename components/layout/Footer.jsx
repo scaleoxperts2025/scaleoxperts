@@ -3,7 +3,7 @@ import "remixicon/fonts/remixicon.css";
 
 const Footer = () => {
   return (
-    <div className="w-full flex flex-col xss:items-center sm:flex-row sm:justify-between mt-[10rem] border-t py-10 bg-white text-black">
+    <div className="w-full flex flex-col xss:items-center sm:flex-row sm:justify-between mt-[10rem] border-t p-10 bg-white text-black">
       <div className="xss:mb-8 sm:mb-0 xss:text-center sm:text-left">
         <div className="flex xss:justify-center sm:justify-start items-center space-x-1.5 font-bold">
           <img

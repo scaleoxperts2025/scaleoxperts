@@ -1,32 +1,13 @@
+import { generateMetadata } from "./metadata";
 import React from "react";
-import NavBar from "@/components/NavBar/NavBar";
+import { NavBar } from "@/components/layout";
 import {
   RiLinkedinBoxFill,
   RiMailFill,
-  RiRocketLine,
-  RiGlobalLine,
-  RiBrainLine,
-  RiTeamLine,
-  RiScales3Line,
-  RiLightbulbLine,
 } from "react-icons/ri";
+import { applicationSteps, benefits } from "@/data/careers";
 
-export async function generateMetadata() {
-  return {
-    title: "Work with ScaleOXperts | Growth Strategy & Consulting Jobs",
-    description:
-      "Build your career with ScaleOXperts—offering growth strategy jobs, consulting jobs, sales consulting jobs, and business consulting jobs for driven professionals.",
-    keywords: [
-      "Scaleoxperts",
-      " growth strategy jobs",
-      " consulting jobs",
-      " business consulting jobs"
-    ],
-    alternates: {
-      canonical: "https://scaleoxperts.com/careers"
-    }
-  };
-}
+export { generateMetadata }
 
 const CareersPage = () => {
   return (
@@ -152,69 +133,7 @@ const ContactSection = () => {
   );
 };
 
-const benefits = [
-  {
-    icon: <RiRocketLine />,
-    title: "Rapid Growth",
-    description:
-      "Accelerate your career in a fast-paced, high-growth environment.",
-  },
-  {
-    icon: <RiGlobalLine />,
-    title: "Global Impact",
-    description: "Work on projects that transform businesses worldwide.",
-  },
-  {
-    icon: <RiBrainLine />,
-    title: "Continuous Learning",
-    description:
-      "Access cutting-edge technologies and ongoing professional development.",
-  },
-  {
-    icon: <RiTeamLine />,
-    title: "Collaborative Culture",
-    description:
-      "Join a diverse team that values open communication and innovation.",
-  },
-  {
-    icon: <RiScales3Line />,
-    title: "Work-Life Balance",
-    description:
-      "Enjoy flexible work arrangements that support your lifestyle.",
-  },
-  {
-    icon: <RiLightbulbLine />,
-    title: "Empowerment",
-    description: "Take ownership of your work and drive meaningful change.",
-  },
-];
 
-const applicationSteps = [
-  {
-    title: "Explore Our Openings",
-    description:
-      "Browse our current job listings on LinkedIn or our careers page to find the perfect role for your skills and aspirations.",
-  },
-  {
-    title: "Submit Your Application",
-    description:
-      "Apply with your resume and a tailored cover letter that showcases your passion for innovation and business scaling.",
-  },
-  {
-    title: "Initial Screening",
-    description:
-      "Our talent acquisition team will review your application and reach out if there's a potential match for your skills and experience.",
-  },
-  {
-    title: "Interview Process",
-    description:
-      "Engage in a series of interviews designed to assess your technical skills, problem-solving abilities, and cultural fit with our team.",
-  },
-  {
-    title: "Decision and Offer",
-    description:
-      "If successful, we will extend an offer and welcome you to the Scaleoxperts family, where you will help shape the future of business scaling!",
-  },
-];
+
 
 export default CareersPage;

@@ -1,0 +1,65 @@
+[
+  {
+    "title": "Sales Consultancy & Business Growth Strategies",
+    "shortName": "sales",
+    "description": "You’re getting leads, but sales aren’t scaling. Sound familiar? That’s where most businesses get stuck—great product, poor closure rates, no system to scale. Our Business growth Service helps you build a results-driven sales engine: from lead qualification frameworks to CRM-led automation. We’re not here to “train” your team—we help you close, consistently.",
+    "icon": "📈",
+    "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2015&q=80"
+  },
+  {
+    "title": "Digital Marketing & Growth Strategy",
+    "shortName": "marketing",
+    "description": "You post. You boost. You hope. Still no traction? If your brand’s digital presence feels invisible—or scattered—we fix that. From sharp SEO that Google loves to storytelling that clicks with customers, we bring your online identity to life. The result? Higher visibility, stronger recall, better conversions.",
+    "icon": "🌐",
+    "image": "https://images.unsplash.com/photo-1432888622747-4eb9a8efeb07?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80"
+  },
+  {
+    "title": "Intelligent Business Process Automation",
+    "shortName": "automation",
+    "description": "Too many tabs, too much chaos, too little clarity? When operations get messy, scale suffers. We audit your workflows, integrate tools that talk to each other, and automate the boring stuff—so your people stay focused on impact. Think of it as turning your backend from friction to flow.",
+    "icon": "🤖",
+    "image": "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+  },
+  {
+    "title": "Startup Scaling Solutions",
+    "shortName": "scaling",
+    "description": "Product-market fit is done. Now what? Growth without structure kills momentum. We come in right when things start moving fast—helping you design scalable systems, clean up your GTM strategy, price for profit, and prep for funding. Whether it’s VCs or market chaos, we’ve helped founders navigate both with our Business consulting services.",
+    "icon": "🚀",
+    "image": "https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+  },
+  {
+    "title": "Market Research & Strategic Planning",
+    "shortName": "research",
+    "description": "Planning based on vibes and hope? It’s costing you. Good decisions come from great insights. We run deep dives into your market, competitors, customers, and trends—then hand you a strategy that’s grounded in data, not boardroom theory. We don’t just tell you what’s happening; we help you act on it.",
+    "icon": "📊",
+    "image": "https://images.unsplash.com/photo-1590650153855-d9e808231d41?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+  },
+  {
+    "title": "Lead Generation & Outreach Optimization",
+    "shortName": "leads",
+    "description": "Still waiting for referrals to grow? That’s not a strategy. We help you go outbound the smart way—no spam, no guesswork. Using targeting frameworks, behavioral triggers, and conversion-focused copy, we get your message in front of the right people—and turn strangers into prospects.",
+    "icon": "📩",
+    "image": "https://images.unsplash.com/photo-1552581234-26160f608093?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+  },
+  {
+    "title": "Comprehensive Bookkeeping & Accounting Solutions",
+    "shortName": "accounting",
+    "description": "If your books are a mess, your business is bleeding silently. We handle your numbers—clean, compliant, and investor-ready. No more late filings, no more spreadsheet chaos. Just real-time clarity and end-to-end financial hygiene that lets you sleep at night (and scale by day).",
+    "icon": "📚",
+    "image": "https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+  },
+  {
+    "title": "Strategic Virtual CFO Services",
+    "shortName": "cfo",
+    "description": "You need CFO-level insight—but not the full-time salary. Get the strategic edge of a seasoned CFO—cash flow forecasting, fundraising strategy, investor reporting, unit economics—without putting one on payroll. We give you high-level financial command without the long-term commitment.",
+    "icon": "💼",
+    "image": "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+  },
+  {
+    "title": "Custom Website & IT Development Service",
+    "shortName": "development",
+    "description": "If your website feels like an online brochure, you’re doing it wrong. We build clean, functional, fast websites and apps that do something—convert, inform, retain. Whether you’re launching a new product, setting up an e-comm store, or building a client portal, we don’t just design—we solve.",
+    "icon": "💻",
+    "image": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2072&q=80"
+  }
+]
